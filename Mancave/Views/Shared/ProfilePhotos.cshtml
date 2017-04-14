@@ -1,0 +1,124 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    ViewBag.Title = "My Photos";
+
+    Account acctProfile = (Account)Model;
+
+    string msg = (ViewBag.Msg != null) ? ViewBag.Msg.ToString() : string.Empty;
+    
+    MancaveEntities db = new MancaveEntities();
+    List<Album> albums = db.Albums.ToList();
+
+    bool bRestricted = Session["Restricted"] != null;
+    bool bProfileView = Request.Url.ToString().ToLower().IndexOf("/account/profile") > -1;
+}
+
+
+<div class="sectionTitle">@ViewBag.Title</div>
+
+<div id="divWarn" class="alert alert-info alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" 
+        aria-hidden="true">
+        &times;
+    </button>
+    <div>@msg</div>
+</div>
+
+<div class="panel panel-default trans">
+    <div class="panel-body" style="padding:20px;">
+        @if(!bProfileView && !bRestricted){ <div><a href="#" data-toggle="collapse" data-target="#editPanel"><span class="pull-right glyphicon glyphicon-pencil"></span></a></div> }
+        <div id="editPanel" class="collapse">
+            <form id="frmPhotos" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Album">Select Album</label>
+                        <select @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" id="AlbumId" name="AlbumId">
+                            @foreach (Album album in albums.OrderBy(a => a.Name))
+                            {
+                                <option value="@album.Id">@album.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4" style="padding-top:20px;">
+                        <a href="#addalbumForm" data-toggle="modal" class="btn btn-md btn-primary" style="vertical-align:bottom;">Add New Album</a>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+                
+
+                <p>&nbsp;</p>
+                <label for="PhotoName">Photo Name</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="text" id="PhotoName" name="PhotoName" placeholder="name" />
+
+                <p>&nbsp;</p>
+                <label for="PhotoUrl">Photo Description</label>
+                <textarea @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" id="PhotoDescription" name="PhotoDescription" placeholder="description"></textarea>
+
+                <p>&nbsp;</p>
+                <div>
+                    <label for="ResumeFile">Photo</label>
+                    <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="file" id="PhotoFile" name="PhotoFile" style="margin-right:20px;" />
+                </div>
+                
+                <p>&nbsp;</p>
+                <button @if(bRestricted){ <text>disabled="disabled"</text> } class="pull-right btn btn-md btn-primary" style="margin-top:10px;">Add Photo</button>
+            </form>
+        </div>
+
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Album</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Photo</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AccountPhoto photo in acctProfile.AccountPhotoes.OrderBy(ap => ap.Album.Name).OrderBy(n => n.Name))
+                {
+                    <tr>
+                        <td style="width:15%;">@photo.Album.Name</td>
+                        <td style="width:20%;">@photo.Name</td>
+                        <td style="width:40%;">@photo.Description</td>
+                        <td style="width:20%;"><a target="_blank" href="~/photos/@photo.PhotoFile"><img src="~/photos/@photo.PhotoFile" style="width:100%;" /></a></td>
+                        <td style="width:5%;"><a class="btn btn-sm btn-primary" href="?del=1&lid=@photo.Id"><span class="glyphicon glyphicon-remove"></span></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+            
+    </div>
+</div>
+
+<!-- Add New Album -->
+<form method="post">
+    <div id="addalbumForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Add New Album
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="AlbumName" class="col-lg-2 control-label">Album Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" id="AlbumName" name="AlbumName" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="addalbumbtn btn btn-primary pull-right">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

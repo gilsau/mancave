@@ -1,0 +1,63 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{ Account acctCurrent = (Account)Model; }
+
+<style>
+
+    .navbar-fixed-top, div.sectionTitle, .modal-header, #footer
+    {
+        background:-webkit-linear-gradient(left top,@acctCurrent.HeaderBackColor1,@acctCurrent.HeaderBackColor2); /* For Safari */
+        background:o-linear-gradient(bottom right,@acctCurrent.HeaderBackColor1,@acctCurrent.HeaderBackColor2); /* For Opera 11.1 to 12.0 */
+        background:-moz-linear-gradient(bottom right,@acctCurrent.HeaderBackColor1,@acctCurrent.HeaderBackColor2); /* For Firefox 3.6 to 15 */
+        background:linear-gradient(to bottom right,@acctCurrent.HeaderBackColor1,@acctCurrent.HeaderBackColor2); /* Standard syntax */
+        color:@acctCurrent.HeaderFontColor;
+    }
+
+        .navbar a, .navbar a:active, .navbar a:visited
+    {
+        color: @acctCurrent.HeaderFontColor;
+        
+    }
+
+    .navbar a:hover
+    {
+        color: #000;
+    }
+
+</style>
+
+<div class="navbar navbar-fixed-top" 
+         style="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1">
+                <a href="~/account/login/"><img src="~/images/logo.jpg" class="logo-img" /></a>
+            </div>
+            <div class="col-sm-11">
+                <div style="height:30px;">
+                    <div class="pull-right">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button" data-target=".navHeaderCollapse" data-toggle="collapse" style="margin:7px 20px 0px 1px;">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse navHeaderCollapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("mancave") > -1 ? "active" : string.Empty )" ><a href="~/mancave"><img src="~/images/icon_caveman.png" style="height:30px;" />&nbsp;Mcave</a></li>
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("manforums") > -1 ? "active" : string.Empty )" ><a href="~/manforums"><img src="~/images/icon_forums.png" style="height:30px;" />&nbsp;Mforums</a></li>
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("mannews") > -1 ? "active" : string.Empty )" ><a href="~/mannews"><img src="~/images/icon_news.png" style="height:30px;" />&nbsp;Mnews</a></li>
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("manstore") > -1 ? "active" : string.Empty )" ><a href="~/manstore"><img src="~/images/icon_store.png" style="height:30px;" />&nbsp;Mstore</a></li>
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("mansports") > -1 ? "active" : string.Empty )" ><a href="~/mansports"><img src="~/images/icon_sports.png" style="height:30px;" />&nbsp;Msports</a></li>
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("manstocks") > -1 ? "active" : string.Empty )" ><a href="~/manstocks"><img src="~/images/icon_stocks.png" style="height:30px;" />&nbsp;Mstocks</a></li>
+                                <li class="@( Request.Url.ToString().ToLower().IndexOf("mangames") > -1 ? "active" : string.Empty )" style="padding-right:20px;"><a href="~/mangames"><img src="~/images/icon_games.png" style="height:30px;" />&nbsp;Mgames</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

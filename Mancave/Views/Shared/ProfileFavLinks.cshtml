@@ -1,0 +1,55 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    ViewBag.Title = "My Favorite Sites";
+
+    Account acctProfile = (Account)Model;
+    
+    bool bRestricted = Session["Restricted"] != null;
+    bool bProfileView = Request.Url.ToString().ToLower().IndexOf("/account/profile") > -1;
+
+    string msg = (ViewBag.Msg != null) ? ViewBag.Msg.ToString() : string.Empty;
+}
+
+<div class="sectionTitle">@ViewBag.Title</div>
+
+<div id="divWarn" class="alert alert-info alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" 
+        aria-hidden="true">
+        &times;
+    </button>
+    <div>@msg</div>
+</div>
+
+<div class="panel panel-default trans">
+    <div class="panel-body" style="padding:20px;">
+        @if(!bProfileView && !bRestricted){ <div><a href="#" data-toggle="collapse" data-target="#editPanel"><span class="pull-right glyphicon glyphicon-pencil"></span></a></div> }
+        <div id="editPanel" class="collapse">
+            <form id="frmLinks" method="post">
+                <label for="Link">Url</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="text" id="FavSite" name="FavSite" placeholder="example: http://www.myfavoritesite.com" />
+
+                <button @if(bRestricted){ <text>disabled="disabled"</text> } class="pull-right btn btn-md btn-primary" style="margin-top:10px;">Add Link</button>
+            </form>
+        </div>
+
+        <p>&nbsp;</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>URL</th>
+                    @if(!bProfileView){ <th style="text-align:right;">Remove</th> }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AccountFavSite link in acctProfile.AccountFavSites)
+                {
+                    <tr>
+                        <td><a target="_blank" href="@link.FavSite">@link.FavSite</a></td>
+                        @if(!bProfileView){ <td style="text-align:right;"><a class="btn btn-sm btn-primary" href="?del=1&lid=@link.Id"><span class="glyphicon glyphicon-remove"></span></a></td> }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

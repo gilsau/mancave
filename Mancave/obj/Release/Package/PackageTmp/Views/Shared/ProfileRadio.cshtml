@@ -1,0 +1,103 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    ViewBag.Title = "My Radio";
+
+    Account acctProfile = (Account)Model;
+    
+    bool bRestricted = Session["Restricted"] != null;
+    bool bProfileView = Request.Url.ToString().ToLower().IndexOf("/account/profile") > -1;
+    bool bStandAlonePage = Request.Url.ToString().ToLower().IndexOf("/media/radioplayer") > -1;
+        
+    string msg = (ViewBag.Msg != null) ? ViewBag.Msg.ToString() : string.Empty;
+}
+
+@if(!bStandAlonePage){
+    <div class="sectionTitle">@ViewBag.Title</div>
+}
+else{
+    <h2>@acctProfile.DisplayName's Radio Player</h2>   
+}
+
+<div id="divWarn" class="alert alert-info alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" 
+        aria-hidden="true">
+        &times;
+    </button>
+    <div>@msg</div>
+</div>
+
+<div class="panel panel-default trans">
+    <div class="panel-body" style="padding:20px;">
+        @if(!bStandAlonePage){
+            if(!bProfileView && !bRestricted){ <div><a href="#" data-toggle="collapse" data-target="#editPanel"><span class="pull-right glyphicon glyphicon-pencil"></span></a></div> }
+            <div id="editPanel" class="collapse">
+                <h3>
+                Get Your Radio Player Now!<br />
+                <br />
+                1) Go to <a target="_blank" href="http://radiotuna.com/OnlineRadioPlayer/Create">RADIO TUNA, by clicking here...</a> and create your own player.<br />
+                2) Grap the Embed Html Code.<br />
+                3) Come back here and save it.<br />
+                <br />
+                That's it! Listen and enjoy music from your favorite genre!<br />
+                </h3>
+
+                <hr />
+                <form id="frmRadio" method="post">
+                    <label for="RadioEmbedCode">Embed Code</label>
+                    <textarea @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" id="RadioEmbedCode" name="RadioEmbedCode" placeholder="embed html code for radio player" rows="5">@acctProfile.RadioEmbedCode</textarea>
+
+                    <!--
+                    <p>&nbsp;</p>
+                    <input @if(bRestricted){ <text>disabled="disabled"</text> } type="radio" name="RadioPosition" @if(acctProfile.RadioPosition == 1){ <text>checked="checked"</text> } />
+                    <label for="RadioPosition">Place on Left Panel</label>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input @if(bRestricted){ <text>disabled="disabled"</text> } type="radio" name="RadioPosition" @if(acctProfile.RadioPosition == 2){ <text>checked="checked"</text> } />
+                    <label for="RadioPosition">Place on Right Panel</label>
+                
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input @if(bRestricted){ <text>disabled="disabled"</text> } type="radio" name="RadioPosition" @if(acctProfile.RadioPosition == 0){ <text>checked="checked"</text> } />
+                    <label for="RadioPosition">Don't do anything. I'll listen to it here or in a separate window</label>
+                    -->
+
+                    <button @if(bRestricted){ <text>disabled="disabled"</text> } class="pull-right btn btn-md btn-primary" style="margin-top:10px;">Save</button>
+                </form>
+            </div>
+        }
+
+        <hr />
+        <p>&nbsp;</p>
+        @if (!string.IsNullOrEmpty(acctProfile.RadioEmbedCode))
+        {
+            <table>
+                <tr>
+                    <td>@Html.Raw(acctProfile.RadioEmbedCode)</td>
+                    <td style="padding:10px;vertical-align:top;">
+                        @if(!bStandAlonePage){
+                            <h4 style="padding:0px;margin:0px;">
+                                <span class="glyphicon glyphicon-hand-left"></span>&nbsp;To Pop out Radio Player into separate window, so you can listen while navigating, Click on Top Right Arrow of Player.
+                            </h4>
+                            if(!bRestricted && !bProfileView){
+                            <hr />
+                            <h4>Want to change your 3 music style buttons?
+                                <ul>
+                                    <li>Go back to <a target="_blank" href="http://radiotuna.com/OnlineRadioPlayer/Create">Radio Tuna</a> and create a new Radio Player</li>
+                                    <li>Grab the embed code</li>
+                                    <li>Then come back here, Click on Pencil (top right)</li>
+                                    <li>Delete existing code and Paste the new Embed Code, then Save</li>
+                                </ul>
+                            </h4>
+                            }
+                        }
+                    </td>
+                </tr>
+            </table>
+        }
+        else{
+            <h4>User has not created a Radio Player.</h4>
+        }
+    </div>
+</div>

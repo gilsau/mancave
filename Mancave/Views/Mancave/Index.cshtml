@@ -1,0 +1,65 @@
+﻿@using Mancave.MancaveServices;
+@{
+    ViewBag.Title = "Mcave";
+
+    Account acctCurrent = (Account)Session["User"];
+}
+
+@section Scripts{
+    <script src="~/scripts/mancave.js"></script>
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <div class="panel">
+            <div class="panel-header text-center"><b>@acctCurrent.MancaveTile1Name</b></div>
+            <div class="tile panel-body">
+                <a href="@acctCurrent.MancaveTile1Url"><img src="~/images/@acctCurrent.MancaveTile1Img" style="width:100%;" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel">
+            <div class="panel-header text-center"><b>@acctCurrent.MancaveTile2Name</b></div>
+            <div class="tile panel-body">
+                <a href="@acctCurrent.MancaveTile2Url"><img src="~/images/@acctCurrent.MancaveTile2Img" style="width:100%;" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel">
+            <div class="panel-header text-center"><b>@acctCurrent.MancaveTile3Name</b></div>
+            <div class="tile panel-body">
+                <a href="@acctCurrent.MancaveTile3Url"><img src="~/images/@acctCurrent.MancaveTile3Img" style="width:100%;" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel">
+            <div class="panel-header text-center"><b>@acctCurrent.MancaveTile4Name</b></div>
+            <div class="tile panel-body">
+                <a href="@acctCurrent.MancaveTile4Url"><img src="~/images/@acctCurrent.MancaveTile4Img" style="width:100%;" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel">
+            <div class="panel-header text-center"><b>@acctCurrent.MancaveTile5Name</b></div>
+            <div class="tile panel-body">
+                <a href="@acctCurrent.MancaveTile5Url"><img src="~/images/@acctCurrent.MancaveTile5Img" style="width:100%;" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel">
+            <div class="panel-header text-center"><b>@acctCurrent.MancaveTile6Name</b></div>
+            <div class="tile panel-body">
+                <a href="@acctCurrent.MancaveTile6Url"><img src="~/images/@acctCurrent.MancaveTile6Img" style="width:100%;" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mcaveContainer">
+    @Html.Partial("Mancave", acctCurrent);
+</div>

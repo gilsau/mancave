@@ -1,0 +1,16 @@
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\Mancave.MancaveServices.dll.config
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\Mancave.MancaveServices.dll
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\Mancave.MancaveServices.pdb
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\EntityFramework.dll
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\EntityFramework.xml
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Release\MancaveServices.csprojResolveAssemblyReference.cache
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Release\Mancave.MancaveServices.dll
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Release\Mancave.MancaveServices.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\Mancave.MancaveServices.dll.config
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\Mancave.MancaveServices.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\Mancave.MancaveServices.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\EntityFramework.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Release\EntityFramework.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Release\MancaveServices.csprojResolveAssemblyReference.cache
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Release\Mancave.MancaveServices.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Release\Mancave.MancaveServices.pdb

@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReferralsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ReferralsModelStoreContainer">
+    <EntitySet Name="Account" EntityType="ReferralsModel.Store.Account" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountContacts" EntityType="ReferralsModel.Store.AccountContacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountLocations" EntityType="ReferralsModel.Store.AccountLocations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountProfessions" EntityType="ReferralsModel.Store.AccountProfessions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Action" EntityType="ReferralsModel.Store.Action" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommMethod" EntityType="ReferralsModel.Store.CommMethod" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Communication" EntityType="ReferralsModel.Store.Communication" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Country" EntityType="ReferralsModel.Store.Country" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Job" EntityType="ReferralsModel.Store.Job" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profession" EntityType="ReferralsModel.Store.Profession" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="State" EntityType="ReferralsModel.Store.State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Status" EntityType="ReferralsModel.Store.Status" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_Account_Country" Association="ReferralsModel.Store.fk_Account_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Account_State" Association="ReferralsModel.Store.fk_Account_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Account_Status" Association="ReferralsModel.Store.fk_Account_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountContact_Status" Association="ReferralsModel.Store.fk_AccountContact_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="AccountContacts" EntitySet="AccountContacts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountContacts_Account_Account" Association="ReferralsModel.Store.fk_AccountContacts_Account_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountContacts" EntitySet="AccountContacts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountContacts_Account_Contact" Association="ReferralsModel.Store.fk_AccountContacts_Account_Contact">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountContacts" EntitySet="AccountContacts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountLocations_Account" Association="ReferralsModel.Store.fk_AccountLocations_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountLocations" EntitySet="AccountLocations" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountLocations_Country" Association="ReferralsModel.Store.fk_AccountLocations_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="AccountLocations" EntitySet="AccountLocations" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountLocations_State" Association="ReferralsModel.Store.fk_AccountLocations_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="AccountLocations" EntitySet="AccountLocations" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountProfessions_Account" Association="ReferralsModel.Store.fk_AccountProfessions_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountProfessions" EntitySet="AccountProfessions" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountProfessions_Profession" Association="ReferralsModel.Store.fk_AccountProfessions_Profession">
+      <End Role="Profession" EntitySet="Profession" />
+      <End Role="AccountProfessions" EntitySet="AccountProfessions" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Account_From" Association="ReferralsModel.Store.fk_Communication_Account_From">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Account_Referred" Association="ReferralsModel.Store.fk_Communication_Account_Referred">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Account_To" Association="ReferralsModel.Store.fk_Communication_Account_To">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Action" Association="ReferralsModel.Store.fk_Communication_Action">
+      <End Role="Action" EntitySet="Action" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_CommMethod" Association="ReferralsModel.Store.fk_Communication_CommMethod">
+      <End Role="CommMethod" EntitySet="CommMethod" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Job" Association="ReferralsModel.Store.fk_Communication_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_StatusReferred" Association="ReferralsModel.Store.fk_Communication_StatusReferred">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_StatusTo" Association="ReferralsModel.Store.fk_Communication_StatusTo">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Job_Account_PostedBy" Association="ReferralsModel.Store.fk_Job_Account_PostedBy">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Job_Status" Association="ReferralsModel.Store.fk_Job_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Middlename" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="Zipcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ProfilePic" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProfileUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="SendHubId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Paypal" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rating" Type="int" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="IGetReferralSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IGetReferralSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="IAmReferralSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IAmReferralSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="IGetRolodexInviteSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IGetRolodexInviteSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="IGetRewardSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IGetRewardSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="IGetNudgeSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IGetNudgeSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="IGetMessageSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IGetMessageSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="IGetJobQuestionSendMeTxtMsg" Type="bit" Nullable="false" />
+    <Property Name="IGetJobQuestionSendMeEmail" Type="bit" Nullable="false" />
+    <Property Name="HidePhoneNumber" Type="bit" Nullable="false" />
+    <Property Name="HideEmailAddress" Type="bit" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AccountContacts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="ContactId" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AccountLocations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="AccountId" Type="int" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AccountProfessions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" />
+    <Property Name="ProfessionId" Type="int" />
+  </EntityType>
+  <EntityType Name="Action">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CommMethod">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Communication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CommMethodId" Type="int" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="FromAcctId" Type="int" Nullable="false" />
+    <Property Name="ToAcctId" Type="int" Nullable="false" />
+    <Property Name="ReferredAcctId" Type="int" />
+    <Property Name="JobId" Type="int" />
+    <Property Name="StatusToId" Type="int" Nullable="false" />
+    <Property Name="StatusReferredId" Type="int" Nullable="false" />
+    <Property Name="ReferralId" Type="uniqueidentifier" />
+    <Property Name="ConversationId" Type="uniqueidentifier" />
+    <Property Name="SubjectTo" Type="nvarchar" MaxLength="250" />
+    <Property Name="MessageTo" Type="text" />
+    <Property Name="MessageToEmail" Type="text" />
+    <Property Name="MessageToTxtMsg" Type="text" />
+    <Property Name="SubjectReferred" Type="nvarchar" MaxLength="250" />
+    <Property Name="MessageReferred" Type="text" />
+    <Property Name="MessageReferredEmail" Type="text" />
+    <Property Name="MessageReferredTxtMsg" Type="text" />
+    <Property Name="MessageToEmailSent" Type="bit" />
+    <Property Name="MessageToTxtMsgSent" Type="bit" />
+    <Property Name="MessageRefEmailSent" Type="bit" />
+    <Property Name="MessageRefTxtMsgSent" Type="bit" />
+    <Property Name="Archived" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="PostedByAcctId" Type="int" />
+    <Property Name="ReferralFee" Type="money" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Profession">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Parent" Type="int" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Icon" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Color" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <Association Name="fk_Account_Country">
+    <End Role="Country" Type="ReferralsModel.Store.Country" Multiplicity="0..1" />
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Account_State">
+    <End Role="State" Type="ReferralsModel.Store.State" Multiplicity="0..1" />
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Account_Status">
+    <End Role="Status" Type="ReferralsModel.Store.Status" Multiplicity="1" />
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountContact_Status">
+    <End Role="Status" Type="ReferralsModel.Store.Status" Multiplicity="1" />
+    <End Role="AccountContacts" Type="ReferralsModel.Store.AccountContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountContacts">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountContacts_Account_Account">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountContacts" Type="ReferralsModel.Store.AccountContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountContacts">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountContacts_Account_Contact">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountContacts" Type="ReferralsModel.Store.AccountContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountContacts">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountLocations_Account">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="0..1" />
+    <End Role="AccountLocations" Type="ReferralsModel.Store.AccountLocations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountLocations">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountLocations_Country">
+    <End Role="Country" Type="ReferralsModel.Store.Country" Multiplicity="0..1" />
+    <End Role="AccountLocations" Type="ReferralsModel.Store.AccountLocations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountLocations">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountLocations_State">
+    <End Role="State" Type="ReferralsModel.Store.State" Multiplicity="0..1" />
+    <End Role="AccountLocations" Type="ReferralsModel.Store.AccountLocations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountLocations">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountProfessions_Account">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="0..1" />
+    <End Role="AccountProfessions" Type="ReferralsModel.Store.AccountProfessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountProfessions">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountProfessions_Profession">
+    <End Role="Profession" Type="ReferralsModel.Store.Profession" Multiplicity="0..1" />
+    <End Role="AccountProfessions" Type="ReferralsModel.Store.AccountProfessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profession">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountProfessions">
+        <PropertyRef Name="ProfessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Account_From">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="FromAcctId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Account_Referred">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="0..1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="ReferredAcctId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Account_To">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="ToAcctId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Action">
+    <End Role="Action" Type="ReferralsModel.Store.Action" Multiplicity="1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Action">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_CommMethod">
+    <End Role="CommMethod" Type="ReferralsModel.Store.CommMethod" Multiplicity="0..1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommMethod">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="CommMethodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Job">
+    <End Role="Job" Type="ReferralsModel.Store.Job" Multiplicity="0..1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_StatusReferred">
+    <End Role="Status" Type="ReferralsModel.Store.Status" Multiplicity="1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="StatusReferredId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_StatusTo">
+    <End Role="Status" Type="ReferralsModel.Store.Status" Multiplicity="1" />
+    <End Role="Communication" Type="ReferralsModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="StatusToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Job_Account_PostedBy">
+    <End Role="Account" Type="ReferralsModel.Store.Account" Multiplicity="0..1" />
+    <End Role="Job" Type="ReferralsModel.Store.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="PostedByAcctId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Job_Status">
+    <End Role="Status" Type="ReferralsModel.Store.Status" Multiplicity="1" />
+    <End Role="Job" Type="ReferralsModel.Store.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

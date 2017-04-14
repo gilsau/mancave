@@ -1,0 +1,112 @@
+﻿@using Mancave.MancaveServices
+@{
+    ViewBag.Title = "My Calendar Events";
+
+    Account acctCurrent = (Account)Session["User"];
+    
+    int day = Request.QueryString["day"] != null ? int.Parse(Request.QueryString["day"].ToString()) : 0;
+    int month = Request.QueryString["month"] != null ? int.Parse(Request.QueryString["month"].ToString()) : 0;
+    int year = Request.QueryString["year"] != null ? int.Parse(Request.QueryString["year"].ToString()) : 0;
+
+    string msg = (ViewBag.Msg != null) ? ViewBag.Msg.ToString() : string.Empty;
+
+    bool bRestricted = Session["Restricted"] != null;
+    
+    DateTime dtToday = new DateTime(year, month, day);
+
+    MancaveEntities db = new MancaveEntities();
+
+    List<AccountCalendarEvent> events = db.AccountCalendarEvents.Where(ce => ce.EventDate.Year == dtToday.Year && ce.EventDate.Month == dtToday.Month && ce.EventDate.Day == dtToday.Day && ce.AccountId == acctCurrent.Id).ToList();
+}
+
+<div class="sectionTitle">@string.Format("{0} - {1:dddd, MMMM dd, yyyy}", ViewBag.Title, dtToday) </div>
+
+<div id="divWarn" class="alert alert-info alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" 
+        aria-hidden="true">
+        &times;
+    </button>
+    <div>@msg</div>
+</div>
+
+<div class="panel panel-default trans">
+    <div class="panel-body" style="padding:20px;">
+        @if(!bRestricted){ <div><a href="#" data-toggle="collapse" data-target="#editPanel"><span class="pull-right glyphicon glyphicon-pencil"></span></a></div> }
+        <div id="editPanel" class="collapse">
+            <form id="frmPhotos" method="post" enctype="multipart/form-data">
+                
+                <p>&nbsp;</p>
+                <label for="PhotoName">Time</label>
+                <select @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" style="width:150px;" id="EventTime" name="EventTime">
+                    <option value="0:0">12:00 AM</option>
+                    <option value="0:30">12:30 AM</option>
+
+                    @{  //AM times
+                        for (int hr = 1; hr < 12; hr++)
+                        {
+                            string time1 = string.Format("{0:00}:00 AM", hr);
+                            string time2 = string.Format("{0:00}:30 AM", hr);
+                            
+                            <option value="@string.Format("{0}:{1}", hr, 0)">@time1</option>
+                            <option value="@string.Format("{0}:{1}", hr, 30)">@time2</option>
+                        }
+                    }
+
+                    <option value="12:0">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+
+                    @{  //PM times
+                        for (int hr = 13; hr < 24; hr++)
+                        {
+                            string time1 = string.Format("{0:00}:00 PM", hr - 12);
+                            string time2 = string.Format("{0:00}:30 PM", hr - 12);
+                            
+                            <option value="@string.Format("{0}:{1}", hr, 0)">@time1</option>
+                            <option value="@string.Format("{0}:{1}", hr, 30)">@time2</option>
+                        }
+                    }
+                </select>
+                
+                <p>&nbsp;</p>
+                <label for="EventName">Name</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="text" id="EventName" name="EventName" />
+
+                <p>&nbsp;</p>
+                <div>
+                    <label for="EventDescription">Description</label>
+                    <textarea @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" id="EventDescription" name="EventDescription" rows="5"></textarea>
+                </div>
+                
+                <p>&nbsp;</p>
+                <button @if(bRestricted){ <text>disabled="disabled"</text> } class="pull-right btn btn-md btn-primary" style="margin-top:10px;">Add Event</button>
+
+                <input type="hidden" value="@day" name="EventDay" />
+                <input type="hidden" value="@month" name="EventMonth" />
+                <input type="hidden" value="@year" name="EventYear" />
+            </form>
+        </div>
+
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(AccountCalendarEvent e in events)
+                {
+                <tr>
+                    <td>@string.Format("{0:hh:mm tt}", e.EventDate)</td>
+                    <td>@e.EventName</td>
+                    <td>@e.EventDescription</td>
+                    <td style="width:5%;"><a class="btn btn-sm btn-primary" href="?day=@day&month=@month&year=@year&del=1&id=@e.Id"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    ViewBag.Title = "My Friends";
+
+    Account acctProfile = (Account)Model;
+    
+    bool bRestricted = Session["Restricted"] != null;
+    bool bProfileView = Request.Url.ToString().ToLower().IndexOf("/account/profile") > -1;
+}
+
+<div class="sectionTitle">@ViewBag.Title</div>
+
+@foreach(AccountFriend acctFriend in acctProfile.AccountFriends.OrderBy(af => af.Account1.DisplayName))
+{
+    Account friend = acctFriend.Account1;
+
+    string dispName = !string.IsNullOrEmpty(friend.DisplayName) ? friend.DisplayName + "," : string.Empty;
+    string firstName = !string.IsNullOrEmpty(friend.FirstName) ? friend.FirstName + "," : string.Empty;
+    string lastName = !string.IsNullOrEmpty(friend.LastName) ? friend.LastName + "," : string.Empty;
+    string city = !string.IsNullOrEmpty(friend.City) ? friend.City + "," : string.Empty;
+    string state = acctProfile.StateId > 0 ? friend.State.Name + "," : string.Empty;
+    string country = acctProfile.CountryId > 0 ? friend.Country.Name + "," : string.Empty;
+    string zipcode = !string.IsNullOrEmpty(friend.Zipcode) ? friend.Zipcode + "," : string.Empty;
+    
+    <div class="panel" style="width:200px;display:inline-block;margin:5px;">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="~/account/profile?id=@friend.Id"><img style="width:100%;" src="~/profilepics/@friend.ProfilePic" /></a>
+                </div>
+                <div class="col-md-8">
+                    @if(!bRestricted && !bProfileView){ <a href="?id=@friend.Id&remove=1"><span class="glyphicon glyphicon-remove pull-right" style="margin:2px;"></span></a> }
+                    <a href="~/account/profile?id=@friend.Id">
+                        <h4>@friend.DisplayName</h4>
+                        (@friend.FirstName @friend.LastName)<br />
+                        @city @state @country
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}

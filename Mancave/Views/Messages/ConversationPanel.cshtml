@@ -1,0 +1,21 @@
+﻿@using Mancave.MancaveServices
+@model IList<Communication>
+
+@{  IList<Communication> msgs = (IList<Communication>)Model;
+    Account acctCurrent = (Account)Session["User"];
+
+    <br />
+                        
+    foreach(Communication msg in msgs)
+    {
+        //Save 'To Account' so you can save messages with their id, when sending them a message
+        ViewBag.ToAcctId = (msg.ToAcctId != acctCurrent.Id) ? msg.ToAcctId : msg.FromAcctId;
+                        
+        <div class="row-fluid" style="padding:5px;">
+            <div><b>@string.Format("{0}", msg.Account.DisplayName)</b>&nbsp;<small class="text-info pull-right">@string.Format("{0:MM/dd/yyyy HH:mm:ss tt}", msg.LastUpdated)</small></div>
+            <div class="messageid" data-id="@msg.Id">@msg.MessageTo</div>
+        </div>
+        <hr style="margin:0px;padding:5px;" />
+    }
+    
+}

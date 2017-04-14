@@ -1,0 +1,160 @@
+
+*************************************************************************************************
+2014.08.19 17:15:34 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 17:15:34 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 17:37:41 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 17:37:41 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 17:39:18 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 17:39:23 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 20:36:24 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 20:36:54 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 20:37:47 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 20:38:07 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 20:38:58 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 20:39:12 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 20:39:53 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 172
+
+*************************************************************************************************
+2014.08.19 21:00:18 ||| Not Available ||| Not Available ||| MESSAGE:No connection string named 'MancaveEntities' could be found in the application config file. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String displayName, String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 215
+
+*************************************************************************************************
+2014.08.19 21:00:57 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.19 21:09:59 ||| Not Available ||| Not Available ||| 

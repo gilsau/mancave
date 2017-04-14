@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mancave", "Mancave\Mancave.csproj", "{2CF1EE56-6466-44EA-BB42-17A3473CF0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MancaveServices", "MancaveServices\MancaveServices.csproj", "{4E0A4BC2-0334-4FE5-ABB5-FDEF9E2342C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CF1EE56-6466-44EA-BB42-17A3473CF0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF1EE56-6466-44EA-BB42-17A3473CF0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF1EE56-6466-44EA-BB42-17A3473CF0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF1EE56-6466-44EA-BB42-17A3473CF0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E0A4BC2-0334-4FE5-ABB5-FDEF9E2342C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E0A4BC2-0334-4FE5-ABB5-FDEF9E2342C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E0A4BC2-0334-4FE5-ABB5-FDEF9E2342C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E0A4BC2-0334-4FE5-ABB5-FDEF9E2342C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

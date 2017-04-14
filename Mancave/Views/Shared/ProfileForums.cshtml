@@ -1,0 +1,36 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    Account acctProfile = (Account)Model;
+    
+    ForumSvc forumSvc = new ForumSvc();
+    
+    ServiceCallResult scr;
+    List<Forum> forums = forumSvc.GetForums(out scr).Where(f => f.OwnerAccountId == acctProfile.Id).ToList();
+}
+
+<div class="sectionTitle">My Forums</div>
+
+<div class="panel" style="margin:10px;padding:10px;">
+    <div class="panel-body" style="padding:10px;">
+        <table class="forumTable table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align:left;">Subject</th>
+                    <th style="text-align:center;">Discussion Threads</th>
+                    <th style="text-align:center;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Forum f in forums.OrderByDescending(f => f.Created))
+                {
+                <tr>
+                    <td style="width:80%;"><a href="~/manforums/?fid=@f.Id">@f.Name.ToUpper()</a></td>
+                    <td style="width:10%;text-align:center;">@f.Topics.Count()</td>
+                    <td style="width:10%;text-align:center;"><a href="~/manforums/?fid=@f.Id"><span class="glyphicon glyphicon-eye-open" style="width:100%;"></span></a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

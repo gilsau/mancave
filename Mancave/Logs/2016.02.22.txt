@@ -1,0 +1,1362 @@
+
+*************************************************************************************************
+2016.02.22 01:24:32 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 01:24:48 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 01:24:49 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 01:25:00 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:25:00 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:25:09 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:25:38 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:25:57 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:25:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:26:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:26:57 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:27:32 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:27:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:28:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:28:57 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:29:27 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:29:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:30:29 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:30:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:31:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:31:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:32:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:32:59 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:33:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:33:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:34:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:34:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:35:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:35:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:36:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:36:59 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 01:37:28 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 14:45:20 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'techstarappsadmin'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:b5036946-a11e-4133-887c-0708283053c3
+Error Number:18456,State:1,Class:14 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection)
+   at Mancave.MancaveServices.StatusSvc.GetAllAccountStatuses(ServiceCallResult& scr) in c:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 20
+
+*************************************************************************************************
+2016.02.22 14:53:26 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'techstarappsadmin'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:22d1a09f-f337-418b-94d5-eb6a70b07ca5
+Error Number:18456,State:1,Class:14 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection)
+   at Mancave.MancaveServices.StatusSvc.GetAllAccountStatuses(ServiceCallResult& scr) in c:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 20
+
+*************************************************************************************************
+2016.02.22 15:15:54 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:16:12 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'techstarappsadmin'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:1ac85fc9-f094-4dfa-b837-14c6f456e972
+Error Number:18456,State:1,Class:14 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<>c__11`1.<GetElementFunction>b__11_2(IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in c:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2016.02.22 15:16:12 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:16:43 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:17:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:21:08 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'techstarappsadmin'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:a9aae8d1-4f4f-4d8c-bb3a-e3d3e42cdc7f
+Error Number:18456,State:1,Class:14 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<>c__11`1.<GetElementFunction>b__11_2(IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in c:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2016.02.22 15:21:08 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:21:08 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:21:08 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:21:08 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:21:08 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:21:09 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:22:32 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:22:43 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:22:43 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:22:51 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:23:19 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:51:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 15:52:19 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:52:20 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:52:25 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:52:55 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 15:53:00 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:25 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:25 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:26 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:32 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:32 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:21:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:22:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:22:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:23:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:23:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:24:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:24:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:25:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:25:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:26:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:26:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:27:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:27:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:28:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:28:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:29:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:29:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:30:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:30:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:31:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:31:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:32:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:32:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:33:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:33:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:34:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:34:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:35:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:35:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:36:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:36:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:37:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:37:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:38:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:38:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:39:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:39:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:40:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:40:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:41:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:41:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:42:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:42:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:43:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:43:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:44:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:44:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:45:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:45:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:46:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:46:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:47:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:47:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:48:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:48:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:49:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:49:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:50:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:50:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:51:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:51:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:52:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:52:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:53:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:53:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:54:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:54:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:55:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:55:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:56:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:56:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:57:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:57:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:58:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:58:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:59:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 17:59:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:00:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:00:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:01:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:01:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:02:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:02:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:03:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:03:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:04:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:04:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:05:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:05:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:06:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:06:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:07:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:07:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:08:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:08:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:09:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:09:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:10:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:10:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:11:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:11:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:12:16 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:12:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:13:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:13:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:14:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:14:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:15:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:15:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:16:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:16:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:17:08 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:17:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:18:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:18:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:19:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:19:50 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:20:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:20:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:21:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:21:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:22:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:22:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:23:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:23:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:24:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:24:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:25:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:25:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:26:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:26:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:27:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:27:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:28:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:28:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:29:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:29:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:30:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:30:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:31:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:31:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:32:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:32:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:33:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:33:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:33:46 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:33:47 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:33:51 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:34:20 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:34:30 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:34:31 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:34:33 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:01 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:01 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:02 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:03 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:03 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:06 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 18:35:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:36:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:36:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:37:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:37:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:38:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:38:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:39:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:39:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:40:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:40:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:41:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:41:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:42:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:42:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:43:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:43:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:44:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:44:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:45:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:45:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:46:08 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:46:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:47:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:47:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:48:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:48:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:49:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:49:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:49:37 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 18:50:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:50:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:51:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:51:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:52:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:52:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:53:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:53:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:54:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:54:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:55:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:55:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:56:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:56:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:57:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:57:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:58:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:58:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:59:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 18:59:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:00:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:00:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:01:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:01:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:02:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:02:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:03:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:03:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:04:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:04:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:05:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:05:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:06:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:06:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:07:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:07:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:08:00 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 19:08:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:08:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:09:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:09:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:10:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:10:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:11:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:11:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:12:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:12:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:13:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:13:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:14:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:14:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:15:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:15:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:16:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:16:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:17:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:17:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:18:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:18:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:19:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:19:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:20:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:20:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:21:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:21:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:22:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:22:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:23:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:23:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:24:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:24:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:25:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:25:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:26:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:26:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:27:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:27:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:28:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:28:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:29:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:29:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:30:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:30:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:31:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:31:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:31:49 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 19:31:57 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:31:57 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:32:00 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:32:30 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:00 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:10 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:10 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:30 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:37 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:55 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:55 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:56 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:33:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:34:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:34:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:35:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:35:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:36:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:36:59 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:37:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:37:52 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:37:52 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:37:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:38:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:38:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:39:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:39:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:40:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:40:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:41:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:41:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:42:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:42:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:43:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:43:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:44:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:44:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:45:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:45:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:46:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:46:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:47:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:47:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:48:28 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:48:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:09 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:16 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:16 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:18 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:25 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:27 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:49:58 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:50:00 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:50:00 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:50:04 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:50:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:50:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:51:05 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:51:35 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:52:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:52:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:53:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:53:36 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:54:06 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:54:16 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:54:18 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:54:48 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:55:18 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:55:48 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:56:18 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:56:48 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:56:51 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:56:53 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:57:23 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 19:57:53 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2016.02.22 20:01:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2016.02.22 20:01:13 ||| Not Available ||| Not Available ||| MESSAGE:The context cannot be used while the model is being created. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.CommSvc.GetMyConversations(Boolean newMessages, Int32 howMany, ServiceCallResult& scr) in c:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\CommSvc.cs:line 104

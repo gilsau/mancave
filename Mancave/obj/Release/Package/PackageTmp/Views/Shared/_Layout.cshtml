@@ -1,0 +1,129 @@
+﻿@using Mancave.MancaveServices;
+@{
+    //Current user
+    Account acctCurrent = (Account)Session["User"];
+    
+    //Get updated user info, from database
+    ServiceCallResult scr;
+    AccountSvc acctSvc = new AccountSvc(); 
+    acctCurrent = acctSvc.GetAccountById(acctCurrent.Id, out scr);
+
+    //Assign updated user account to session var
+    Session["User"] = acctCurrent;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mcave.com - @ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", false)
+    <style>
+        #mainPanel {
+         background: 
+
+                /* top, transparent red, faked with gradient */ 
+                linear-gradient(
+                  rgba(255, 255, 255, 0.@acctCurrent.MainPanelBackImgTransparency), 
+                  rgba(255, 255, 255, 0.@acctCurrent.MainPanelBackImgTransparency)
+                ),
+
+                /* bottom, image */
+                url(/backimgs/@acctCurrent.BackgroundImage) 100% 100%;
+        }
+
+        #mainPanel .panel, #mainPanel .panel .panel-body
+        {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        #mainPanel > .panel
+        {
+            background: linear-gradient(
+                            rgba(255, 255, 255, 0.@acctCurrent.MainPanelPanelsTransparency), 
+                            rgba(255, 255, 255, 0.@acctCurrent.MainPanelPanelsTransparency)
+            );
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="header">@Html.Partial("Header", acctCurrent)</div>
+        </div>
+        <div class="row">
+            <div id="leftPanel" class="col-md-2">@Html.Partial("LeftPanel", acctCurrent)</div>
+            <div id="mainPanel" class="col-md-8">@RenderBody()</div>
+            <div id="rightPanel" class="col-md-2">@Html.Partial("RightPanel", acctCurrent)</div>
+        </div>
+        <div class="row">
+            <div id="footer">@Html.Partial("Footer")</div>
+        </div>
+    </div>
+
+    <!-- Send Message modal -->
+    <div id="messageForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Send Message to <span id="message-name"></span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="contact-message" class="col-lg-2 control-label">Message</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" id="message-text" rows="8" ></textarea>
+                                <input type="hidden" id="message-contactid" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="sendmessagebtn btn btn-primary pull-right">Send</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generic dialog box w/message & NO buttons -->
+    <div class="modal fade" id="modalProcessing" tabindex="-1" role="dialog" aria-labelledby="modalProcessingTitle" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="modalProcessingTitle" class="modal-header">Mancave</div>
+            <div class="modal-body">
+                <div class="center-block">
+                    <div id="procMsg" style="text-align:center;"></div>
+                    <img class="center-block" src="~/images/loading_animated.gif" style="width:60px;" />
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Generic dialog box w/message & OK button -->
+    <div class="modal fade" id="modalOk" tabindex="-1" role="dialog" aria-labelledby="modalOkTitle" aria-hidden="true">
+        <div class="modal-dialog modal-info">
+        <div class="modal-content">
+            <div id="modalOkTitle" class="modal-header">Mancave</div>
+            <div class="modal-body">
+            <div class="center-block" id="okMsg" style="text-align:center;"></div>
+            </div>
+            <div class="modal-footer">
+            <a id="btnOK" href="#" class="btn btn-default" data-dismiss="modal">OK</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="~/scripts/jquery.min.js" ></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/global.js"></script>
+    <script src="~/scripts/calendar.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

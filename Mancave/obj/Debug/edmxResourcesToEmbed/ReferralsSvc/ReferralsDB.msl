@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReferralsModelStoreContainer" CdmEntityContainer="ReferralsEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="ReferralsModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="ProfileUrl" ColumnName="ProfileUrl" />
+          <ScalarProperty Name="SendHubId" ColumnName="SendHubId" />
+          <ScalarProperty Name="Paypal" ColumnName="Paypal" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="IGetReferralSendMeTxtMsg" ColumnName="IGetReferralSendMeTxtMsg" />
+          <ScalarProperty Name="IGetReferralSendMeEmail" ColumnName="IGetReferralSendMeEmail" />
+          <ScalarProperty Name="IAmReferralSendMeTxtMsg" ColumnName="IAmReferralSendMeTxtMsg" />
+          <ScalarProperty Name="IAmReferralSendMeEmail" ColumnName="IAmReferralSendMeEmail" />
+          <ScalarProperty Name="IGetRolodexInviteSendMeTxtMsg" ColumnName="IGetRolodexInviteSendMeTxtMsg" />
+          <ScalarProperty Name="IGetRolodexInviteSendMeEmail" ColumnName="IGetRolodexInviteSendMeEmail" />
+          <ScalarProperty Name="IGetRewardSendMeTxtMsg" ColumnName="IGetRewardSendMeTxtMsg" />
+          <ScalarProperty Name="IGetRewardSendMeEmail" ColumnName="IGetRewardSendMeEmail" />
+          <ScalarProperty Name="IGetNudgeSendMeTxtMsg" ColumnName="IGetNudgeSendMeTxtMsg" />
+          <ScalarProperty Name="IGetNudgeSendMeEmail" ColumnName="IGetNudgeSendMeEmail" />
+          <ScalarProperty Name="IGetMessageSendMeTxtMsg" ColumnName="IGetMessageSendMeTxtMsg" />
+          <ScalarProperty Name="IGetMessageSendMeEmail" ColumnName="IGetMessageSendMeEmail" />
+          <ScalarProperty Name="IGetJobQuestionSendMeTxtMsg" ColumnName="IGetJobQuestionSendMeTxtMsg" />
+          <ScalarProperty Name="IGetJobQuestionSendMeEmail" ColumnName="IGetJobQuestionSendMeEmail" />
+          <ScalarProperty Name="HidePhoneNumber" ColumnName="HidePhoneNumber" />
+          <ScalarProperty Name="HideEmailAddress" ColumnName="HideEmailAddress" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountContacts">
+      <EntityTypeMapping TypeName="ReferralsModel.AccountContact">
+        <MappingFragment StoreEntitySet="AccountContacts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountLocations">
+      <EntityTypeMapping TypeName="ReferralsModel.AccountLocation">
+        <MappingFragment StoreEntitySet="AccountLocations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountProfessions">
+      <EntityTypeMapping TypeName="ReferralsModel.AccountProfession">
+        <MappingFragment StoreEntitySet="AccountProfessions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="ProfessionId" ColumnName="ProfessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actions">
+      <EntityTypeMapping TypeName="ReferralsModel.Action">
+        <MappingFragment StoreEntitySet="Action">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommMethods">
+      <EntityTypeMapping TypeName="ReferralsModel.CommMethod">
+        <MappingFragment StoreEntitySet="CommMethod">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Communications">
+      <EntityTypeMapping TypeName="ReferralsModel.Communication">
+        <MappingFragment StoreEntitySet="Communication">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CommMethodId" ColumnName="CommMethodId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="FromAcctId" ColumnName="FromAcctId" />
+          <ScalarProperty Name="ToAcctId" ColumnName="ToAcctId" />
+          <ScalarProperty Name="ReferredAcctId" ColumnName="ReferredAcctId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="StatusToId" ColumnName="StatusToId" />
+          <ScalarProperty Name="StatusReferredId" ColumnName="StatusReferredId" />
+          <ScalarProperty Name="ReferralId" ColumnName="ReferralId" />
+          <ScalarProperty Name="ConversationId" ColumnName="ConversationId" />
+          <ScalarProperty Name="SubjectTo" ColumnName="SubjectTo" />
+          <ScalarProperty Name="MessageTo" ColumnName="MessageTo" />
+          <ScalarProperty Name="MessageToEmail" ColumnName="MessageToEmail" />
+          <ScalarProperty Name="MessageToTxtMsg" ColumnName="MessageToTxtMsg" />
+          <ScalarProperty Name="SubjectReferred" ColumnName="SubjectReferred" />
+          <ScalarProperty Name="MessageReferred" ColumnName="MessageReferred" />
+          <ScalarProperty Name="MessageReferredEmail" ColumnName="MessageReferredEmail" />
+          <ScalarProperty Name="MessageReferredTxtMsg" ColumnName="MessageReferredTxtMsg" />
+          <ScalarProperty Name="MessageToEmailSent" ColumnName="MessageToEmailSent" />
+          <ScalarProperty Name="MessageToTxtMsgSent" ColumnName="MessageToTxtMsgSent" />
+          <ScalarProperty Name="MessageRefEmailSent" ColumnName="MessageRefEmailSent" />
+          <ScalarProperty Name="MessageRefTxtMsgSent" ColumnName="MessageRefTxtMsgSent" />
+          <ScalarProperty Name="Archived" ColumnName="Archived" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="ReferralsModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="ReferralsModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PostedByAcctId" ColumnName="PostedByAcctId" />
+          <ScalarProperty Name="ReferralFee" ColumnName="ReferralFee" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professions">
+      <EntityTypeMapping TypeName="ReferralsModel.Profession">
+        <MappingFragment StoreEntitySet="Profession">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="ReferralsModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="ReferralsModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

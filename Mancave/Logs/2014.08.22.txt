@@ -1,0 +1,242 @@
+
+*************************************************************************************************
+2014.08.22 01:12:53 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.22 01:13:04 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 01:13:15 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.22 01:15:13 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 01:19:33 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.22 01:25:01 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 01:25:53 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 02:02:29 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.22 02:02:35 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 02:25:43 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 03:02:10 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 04:39:24 ||| Not Available ||| Not Available ||| MESSAGE:An error occurred while executing the command definition. See the inner exception for details. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Gender'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:c94d48a7-695d-4252-80a8-9936b066d4f3 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2014.08.22 04:41:08 ||| Not Available ||| Not Available ||| MESSAGE:An error occurred while executing the command definition. See the inner exception for details. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Gender'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:c94d48a7-695d-4252-80a8-9936b066d4f3 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2014.08.22 04:41:47 ||| Not Available ||| Not Available ||| MESSAGE:An error occurred while executing the command definition. See the inner exception for details. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Gender'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:c94d48a7-695d-4252-80a8-9936b066d4f3 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2014.08.22 04:43:26 ||| Not Available ||| Not Available ||| MESSAGE:An error occurred while executing the command definition. See the inner exception for details. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Gender'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:287e2b44-8015-4263-a830-3889d792ac00 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2014.08.22 04:45:01 ||| Not Available ||| Not Available ||| MESSAGE:An error occurred while executing the command definition. See the inner exception for details. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Gender'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:287e2b44-8015-4263-a830-3889d792ac00 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.AuthenticateUser(String email, String password, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 133
+
+*************************************************************************************************
+2014.08.22 04:47:12 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 04:48:02 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 04:48:28 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 04:51:19 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 04:54:25 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 06:19:51 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 06:32:28 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 06:58:44 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 07:17:47 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 12:07:02 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.22 12:59:46 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73

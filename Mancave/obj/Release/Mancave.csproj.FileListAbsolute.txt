@@ -1,0 +1,98 @@
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.pdb
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Antlr3.Runtime.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.AspNet.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.Core.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\EntityFramework.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.MancaveServices.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Microsoft.Web.Infrastructure.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Newtonsoft.Json.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Net.Http.Formatting.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Helpers.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Http.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Http.WebHost.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Mvc.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Optimization.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Razor.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Deployment.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Razor.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\WebGrease.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.Data.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.WebData.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.MancaveServices.pdb
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\EntityFramework.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Newtonsoft.Json.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Net.Http.Formatting.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Helpers.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Http.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Http.WebHost.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Mvc.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Razor.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Deployment.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Razor.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.Data.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.WebData.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.AspNet.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.Core.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.csprojResolveAssemblyReference.cache
+E:\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.csproj.ResolveComReference.cache
+E:\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.dll
+E:\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Antlr3.Runtime.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.AspNet.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.Core.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\EntityFramework.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.MancaveServices.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Microsoft.Web.Infrastructure.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Newtonsoft.Json.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Helpers.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Mvc.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Optimization.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Razor.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Deployment.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Razor.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\WebGrease.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.Data.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.WebData.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Mancave.MancaveServices.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\EntityFramework.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Newtonsoft.Json.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Helpers.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Mvc.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.Razor.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Deployment.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\System.Web.WebPages.Razor.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.Data.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\WebMatrix.WebData.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.AspNet.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.Core.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OAuth.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.csprojResolveAssemblyReference.cache
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.csproj.ResolveComReference.cache
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\Mancave\obj\Release\Mancave.pdb

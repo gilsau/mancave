@@ -1,0 +1,44 @@
+﻿@using Mancave.MancaveServices
+@{
+    ViewBag.Title = "Notifications";
+
+    ServiceCallResult scrNotes;
+    IEnumerable<Communication> notes = CommSvc.GetMyNotifications(100, out scrNotes);
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="sectionTitle">Friend Requests</div>
+
+        <table class="table table-hover">
+
+        @{  //Notifications
+            if(notes.Count() > 0){
+                foreach (Communication comm in notes)
+                {
+                    string url = "#";
+                    if(comm.ActionId == (int)ActionType.Invitation){
+                        url = Url.Content("~/messages/notifications");
+                    }
+                        
+                    <tr>
+                        <td style="width:10%;"><img class="circularProfilePic2" src="~/profilepics/@comm.Account.ProfilePic" style="width:100%;" /></td>
+                        <td style="width:10%;font-weight:bold;font-size:16px;">@string.Format("{0}", comm.Account.DisplayName)</td>
+                        <td style="width:20%;">@comm.MessageTo</td>
+                        <td style="width:60%;text-align:right;">
+                            <a href="?id=@comm.Id&fromId=@comm.FromAcctId&toId=@comm.ToAcctId&accept=1"><span class="btn btn-md btn-primary glyphicon glyphicon-check">&nbsp;Accept</span></a>
+                            <a href="?id=@comm.Id&fromId=@comm.FromAcctId&toId=@comm.ToAcctId&accept=0"><span class="btn btn-md btn-primary glyphicon glyphicon-remove">&nbsp;Deny</span></a>
+                        </td>
+                    </tr>
+            
+                }
+            }
+            else{
+                <h4 style="padding:10px;">There are currently no friend requests.</h4>
+            }
+        }
+        
+        </table>
+
+    </div>
+</div>

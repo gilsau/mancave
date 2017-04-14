@@ -1,0 +1,68 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{ Account acctCurrent = (Account)Model;
+   string keyword = Request.QueryString["keyword"] != null ? Request.QueryString["keyword"].ToString() : string.Empty;
+}
+
+<p></p>
+@if(Session["Restricted"] == null){
+    <form id="frmSearch" action="~/mancave/search" method="get">
+        <div class="input-group" style="margin:10px 0px 0px 0px;">
+                <input style="font-size:12px;" class="form-control" type="text" name="keyword" value="@keyword" placeholder="topics, skills, people..." />
+                <span class="input-group-addon"><button class="glyphicon glyphicon-search"></button></span>
+        </div>
+    </form>
+    
+    <div id="calendarContainer">
+        @{ ViewBag.Year = DateTime.Now.Year; ViewBag.Month = DateTime.Now.Month; }
+        @Html.Partial("Calendar", ((Account)Model))
+    </div>
+}
+
+<style>
+    #rightPanel
+    {
+        background:-webkit-linear-gradient(left top,@acctCurrent.RightPanelBackColor1,@acctCurrent.RightPanelBackColor2); /* For Safari */
+        background:o-linear-gradient(bottom right,@acctCurrent.RightPanelBackColor1,@acctCurrent.RightPanelBackColor2); /* For Opera 11.1 to 12.0 */
+        background:-moz-linear-gradient(bottom right,@acctCurrent.RightPanelBackColor1,@acctCurrent.RightPanelBackColor2); /* For Firefox 3.6 to 15 */
+        background:linear-gradient(to bottom right,@acctCurrent.RightPanelBackColor1,@acctCurrent.RightPanelBackColor2); /* Standard syntax */
+        color:@acctCurrent.RightPanelFontColor;
+    }
+</style>
+    
+<div class="panel" style="margin:10px 0px 10px 0px;">
+    <div class="panel-body">
+        <div class="page-header"><img src="~/images/icon_friends.jpg" style="width:30px;">&nbsp;FRIENDS</div>
+            <ul class="nav nav-stacked">
+                @foreach(AccountFriend friend in acctCurrent.AccountFriends)
+                {
+                    <li><a href="~/account/profile/?id=@friend.Account1.Id">
+                        <div class="row" style="padding:0px;margin:0px;">
+                            <div class="col-xs-2" style="font-weight:bold;font-size:12px;text-align:left;color:#000;vertical-align:top;">
+                                <div class="row"><img src="~/profilepics/@friend.Account1.ProfilePic" style="width:100%;" /></div>
+                            </div>
+                            <div class="col-xs-10" style="font-size:12px;text-align:left;vertical-align:top;">
+                                <div>@friend.Account1.DisplayName</div>
+                                <div>
+                                    @{ string stateName = acctCurrent.State == null ? string.Empty : ", " + acctCurrent.State.Abbrev; }
+                                    @string.Format("{0}{1}", acctCurrent.City, stateName)
+
+                                    &nbsp;&nbsp;
+
+                                    @{ string countryName = acctCurrent.Country == null ? string.Empty : acctCurrent.Country.Abbrev; }
+                                    @countryName
+                                </div>
+                                
+                                <!--
+                                <b style="color:#808080;">SPECIALTIES</b>
+                                <hr style="padding:0px;margin:0px;color:#808080;" />
+                                <div>Electrician, PHP Programmer, Writer</div>
+                                -->
+                            </div>
+                        </div>
+                        </a>
+                    </li>
+                }
+            </ul>
+    </div>
+</div>

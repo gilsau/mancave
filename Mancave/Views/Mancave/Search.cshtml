@@ -1,0 +1,150 @@
+﻿@using Mancave.MancaveServices
+@{
+    ViewBag.Title = "Search Results";
+
+    List<Account> accounts = ViewBag.People;
+    List<AccountSkill> skills = ViewBag.Skills;
+    List<Forum> forums = ViewBag.Forums;
+    List<Topic> topics = ViewBag.Topics;
+    List<ForumMessage> msgs = ViewBag.Messages;
+
+    topics = topics.Union(msgs.Select(m => m.Topic)).ToList();
+
+    string dispName = string.Empty;
+    string firstName = string.Empty;
+    string lastName = string.Empty;
+    string city = string.Empty;
+    string state = string.Empty;
+    string country = string.Empty;
+    string zipcode = string.Empty;
+    
+}
+
+<div class="panel">
+    <div class="panel-body" style="padding:20px;">
+        <h4>People Found</h4>
+        @if(accounts != null){
+            <table class="table table-hover">
+                <tbody>
+                    @foreach (Account acct in accounts)
+                    {
+                        dispName = !string.IsNullOrEmpty(acct.DisplayName) ? acct.DisplayName : string.Empty;
+                        firstName = !string.IsNullOrEmpty(acct.FirstName) ? acct.FirstName : string.Empty;
+                        lastName = !string.IsNullOrEmpty(acct.LastName) ? acct.LastName : string.Empty;
+                        city = !string.IsNullOrEmpty(acct.City) ? acct.City : string.Empty;
+                        state = acct.StateId > 0 ? acct.State.Name : string.Empty;
+                        country = acct.CountryId > 0 ? acct.Country.Name : string.Empty;
+                        zipcode = !string.IsNullOrEmpty(acct.Zipcode) ? acct.Zipcode : string.Empty;
+                        
+                        <tr>
+                            <td style="width:10%;"><a href="~/account/profile?id=@acct.Id"><img src="~/profilepics/@acct.ProfilePic" style="width:100%;" /></a></td>
+                            <td style="width:15%;">
+                                <a href="~/account/profile?id=@acct.Id">
+                                    @acct.DisplayName<br />
+                                    (@acct.FirstName @acct.LastName)
+                                </a>
+                            </td>
+                            <td style="width:75%;">@city @state @country</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-body" style="padding:20px;">
+        <h4>Skills Found</h4>
+        @if(skills != null){
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Location</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (AccountSkill skill in skills)
+                    {
+                        dispName = !string.IsNullOrEmpty(skill.Account.DisplayName) ? skill.Account.DisplayName : string.Empty;
+                        firstName = !string.IsNullOrEmpty(skill.Account.FirstName) ? skill.Account.FirstName : string.Empty;
+                        lastName = !string.IsNullOrEmpty(skill.Account.LastName) ? skill.Account.LastName : string.Empty;
+                        city = !string.IsNullOrEmpty(skill.Account.City) ? skill.Account.City : string.Empty;
+                        state = skill.Account.StateId > 0 ? skill.Account.State.Name : string.Empty;
+                        country = skill.Account.CountryId > 0 ? skill.Account.Country.Name : string.Empty;
+                        zipcode = !string.IsNullOrEmpty(skill.Account.Zipcode) ? skill.Account.Zipcode : string.Empty;
+                        
+                        <tr>
+                            <td style="width:10%;"><a href="~/account/profile?id=@skill.Account.Id"><img src="~/profilepics/@skill.Account.ProfilePic" style="width:100%;" /></a></td>
+                            <td style="width:15%;">
+                                <a href="~/account/profile?id=@skill.Account.Id">
+                                    @dispName<br />
+                                    (@firstName @lastName)
+                                </a>
+                            </td>
+                            <td style="width:75%;">@city @state @country</td>
+                            <td>@skill.Skill</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-body" style="padding:20px;">
+        <h4>Forums Found</h4>
+        @if(forums != null){
+            <table class="forumTable table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align:left;">Subject</th>
+                    <th style="text-align:center;">Discussion Threads</th>
+                    <th style="text-align:center;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Forum f in forums.OrderByDescending(f => f.Created))
+                {
+                <tr>
+                    <td style="width:80%;"><a href="~/manforums/?fid=@f.Id">@f.Name.ToUpper()</a></td>
+                    <td style="width:10%;text-align:center;">@f.Topics.Count()</td>
+                    <td style="width:10%;text-align:center;"><a href="~/manforums/?fid=@f.Id"><span class="glyphicon glyphicon-eye-open" style="width:100%;"></span></a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        }
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-body" style="padding:20px;">
+        <h4>Discussions Found</h4>
+        @if(topics != null){
+            <table class="forumTable table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align:left;">Discussion Thread</th>
+                    <th style="text-align:center;">Posts</th>
+                    <th style="text-align:center;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Topic t in topics.OrderByDescending(t => t.Created))
+                {
+                <tr>
+                    <td style="width:80%;"><a href="~/manforums/?tid=@t.Id">@t.Name.ToUpper()</a></td>
+                    <td style="width:10%;text-align:center;">@t.ForumMessages.Count()</td>
+                    <td style="width:10%;text-align:center;"><a href="~/manforums/?tid=@t.Id"><span class="glyphicon glyphicon-eye-open" style="width:100%;"></span></a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        }
+    </div>
+</div>

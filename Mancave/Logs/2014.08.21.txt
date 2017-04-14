@@ -1,0 +1,275 @@
+
+*************************************************************************************************
+2014.08.21 00:12:52 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 00:28:43 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 00:39:38 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 01:07:04 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 01:16:39 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 01:19:12 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 01:19:40 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 01:32:42 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 01:57:09 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 02:46:12 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 02:50:02 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 02:52:05 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 02:52:11 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 02:53:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 02:53:34 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 03:03:39 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 03:31:11 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 03:36:22 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 03:50:36 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 04:25:09 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 04:46:17 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 04:56:45 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 04:57:50 ||| Gil ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.08.21 05:05:49 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Input string was not in a correct format. --- INNER-EXCEPTION: --- SOURCE:mscorlib --- STACK-TRACE:   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(String format, Object arg0)
+   at Mancave.MancaveServices.AccountSvc.GetAccountById(Int32 accountId, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 97
+
+*************************************************************************************************
+2014.08.21 05:28:54 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 05:41:54 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 05:43:52 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 05:45:45 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 05:48:53 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 05:49:10 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 05:50:57 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 05:52:36 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 05:54:59 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 05:57:27 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:02:19 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:09:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 06:13:19 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 06:13:59 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Object reference not set to an instance of an object. --- INNER-EXCEPTION: --- SOURCE:Mancave.MancaveServices --- STACK-TRACE:   at Mancave.MancaveServices.AccountSvc.UpdateAccount(Account acct, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 263
+
+*************************************************************************************************
+2014.08.21 06:15:56 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 06:17:39 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Object reference not set to an instance of an object. --- INNER-EXCEPTION: --- SOURCE:Mancave.MancaveServices --- STACK-TRACE:   at Mancave.MancaveServices.AccountSvc.UpdateAccount(Account acct, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 263
+
+*************************************************************************************************
+2014.08.21 06:19:21 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:21:10 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:22:57 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Object reference not set to an instance of an object. --- INNER-EXCEPTION: --- SOURCE:Mancave.MancaveServices --- STACK-TRACE:   at Mancave.MancaveServices.AccountSvc.UpdateAccount(Account acct, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 263
+
+*************************************************************************************************
+2014.08.21 06:25:47 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:26:07 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Object reference not set to an instance of an object. --- INNER-EXCEPTION: --- SOURCE:Mancave.MancaveServices --- STACK-TRACE:   at Mancave.MancaveServices.AccountSvc.UpdateAccount(Account acct, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 263
+
+*************************************************************************************************
+2014.08.21 06:26:25 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:27:33 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Object reference not set to an instance of an object. --- INNER-EXCEPTION: --- SOURCE:Mancave.MancaveServices --- STACK-TRACE:   at Mancave.MancaveServices.AccountSvc.UpdateAccount(Account acct, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 263
+
+*************************************************************************************************
+2014.08.21 06:27:42 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:29:34 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Object reference not set to an instance of an object. --- INNER-EXCEPTION: --- SOURCE:Mancave.MancaveServices --- STACK-TRACE:   at Mancave.MancaveServices.AccountSvc.UpdateAccount(Account acct, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 263
+
+*************************************************************************************************
+2014.08.21 06:35:34 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:35:53 ||| Gil ||| gilbert.sauceda@gmail.com ||| MESSAGE:Input string was not in a correct format. --- INNER-EXCEPTION: --- SOURCE:mscorlib --- STACK-TRACE:   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(String format, Object arg0)
+   at Mancave.MancaveServices.AccountSvc.GetAccountById(Int32 accountId, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 97
+
+*************************************************************************************************
+2014.08.21 06:38:26 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 06:56:06 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:04:42 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:06:47 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 07:07:05 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:12:45 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:22:35 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:22:54 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 07:23:15 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:23:38 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 07:23:55 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:25:12 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 07:25:33 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 09:54:27 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.08.21 09:54:55 ||| Not Available ||| Not Available ||| MESSAGE:Value cannot be null.
+Parameter name: source --- INNER-EXCEPTION: --- SOURCE:System.Core --- STACK-TRACE:   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Mancave.MancaveServices.StatusSvc.UpdateAccountStatus(Int32 accountId, StatusType statusType, HashSet`1 appStatuses, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 73
+
+*************************************************************************************************
+2014.08.21 21:37:29 ||| Not Available ||| Not Available ||| 

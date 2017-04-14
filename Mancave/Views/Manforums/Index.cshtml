@@ -1,0 +1,262 @@
+﻿@using Mancave.MancaveServices
+@using Mancave.Helpers
+@{
+    ViewBag.Title = "Mforums";
+    
+    Account acctCurrent = (Account)Session["User"];
+    
+    ForumSvc forumSvc = new ForumSvc();
+    
+    ServiceCallResult scr;
+    List<Forum> forums = forumSvc.GetForums(out scr);
+
+    string mineParam = string.Empty;
+    if(Request.QueryString["mine"] != null){
+        if(Request.QueryString["mine"] == "1"){
+            mineParam = "mine=1";
+            forums = forums.Where(f => f.OwnerAccountId == acctCurrent.Id).ToList();
+        }
+    }
+
+    int forumId = Request.QueryString["fid"] != null ? int.Parse(Request.QueryString["fid"].ToString()) : 0;
+    List<Topic> topics = forumSvc.GetTopics(forumId, out scr);
+    Forum forum = forumSvc.GetForumById(forumId, out scr);
+    
+    int topicId = Request.QueryString["tid"] != null ? int.Parse(Request.QueryString["tid"].ToString()) : 0;
+    List<ForumMessage> forumMsgs = forumSvc.GetForumMsgs(topicId, out scr);
+    Topic topic = forumSvc.GetTopicById(topicId, out scr);
+}
+
+@section Scripts{
+    <script src="~/scripts/forum.js"></script>
+}
+
+<div class="panel panel-default trans">
+
+    <!-- Breadcrumbs -->
+    @if (Request.QueryString["fid"] != null || Request.QueryString["tid"] != null)
+    {
+        <a href="~/manforums/?@mineParam" style="font-size:16px;">Back to Forums</a>
+    }
+    
+    @if(Request.QueryString["tid"] != null)
+    {
+        @:| <a href="?fid=@topic.Forum.Id&@mineParam" style="font-size:16px;">@topic.Forum.Name.ToUpper()</a>
+    }
+    
+    <!-- List of Messages -->
+    @if (Request.QueryString["tid"] != null)
+    {   
+        <div class="sectionTitle" style="padding:30px;">
+            @if(Session["Restricted"] == null){
+                <a href="#addForumMsgForm" data-toggle="modal"><span class="pull-right glyphicon glyphicon-plus"></span></a>
+            }
+            @topic.Name
+        </div>
+        <div class="panel-body" style="padding:10px;">
+            <table class="forumTable table">
+                <tbody>
+                @foreach (ForumMessage msg in forumMsgs.OrderByDescending(fm => fm.Created))
+                {
+                    string days, hours, mins;
+                    TimeUtility.LongAgo(out days, out hours, out mins, msg.Created);
+                       
+                    <tr>
+                        <td style="width:5%;"><a href="~/account/profile/?id=@msg.Account.Id"><img src="~/profilepics/@msg.Account.ProfilePic" style="width:100%;" /></a></td>
+                        <td style="width:10%;">
+                            <div><b>@msg.Account.DisplayName</b></div>
+                            <div><b>@days @hours @mins ago</b></div>
+                        </td>
+                        <td style="width:85%;">
+                            <pre>@msg.Message
+                                @if (!string.IsNullOrEmpty(msg.PhotoFile))
+                                {
+                                    <img src="~/photos/@msg.PhotoFile" style="height:150px;" />
+                                }
+                            </pre>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            
+        </div>
+    }
+    else if (Request.QueryString["fid"] != null)
+    {
+        <!-- List of Topics -->
+        <div class="sectionTitle">
+            @forum.Name.ToUpper() - Discussion Threads
+            
+            @if(Session["Restricted"] == null){
+                <a href="#addTopicForm" data-toggle="modal"><span class="pull-right glyphicon glyphicon-plus"></span></a>
+            }
+        </div>
+        <div class="panel-body" style="padding:10px;">
+            <table class="forumTable table table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Discussion</th>
+                        <th style="text-align:left;">Created By</th>
+                        <th style="text-align:center;">Posts</th>
+                        <th style="text-align:center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (Topic t in topics)
+                {
+                    string days, hours, mins;
+                    TimeUtility.LongAgo(out days, out hours, out mins, t.Created);
+                    
+                    <tr>
+                        <td style="width:60%;text-align:left;">@t.Name</td>
+                        <td style="width:20%;text-align:center;font-weight:bold;">
+                            <table>
+                                <tr>
+                                    <td><a href="~/account/profile/?id=@t.Account.Id"><img src="~/profilepics/@t.Account.ProfilePic" style="height:30px;" /></a></td>
+                                    <td style="text-align:left;padding:5px;">
+                                        @t.Account.DisplayName<br />
+                                        @string.Format("{0} {1} {2} ago", days, hours, mins)
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width:10%;text-align:center;">@t.ForumMessages.Count()</td>
+                        <td style="width:10%;text-align:center;"><a href="~/manforums/?tid=@t.Id&@mineParam"><span class="glyphicon glyphicon-eye-open" style="width:100%;"></span></a></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <!-- List of Forums -->
+        <div class="sectionTitle">
+            Forums
+            
+            @if(Session["Restricted"] == null){
+                <a href="#addForumForm" data-toggle="modal"><span class="pull-right glyphicon glyphicon-plus"></span></a>
+            }
+        </div>
+        <div class="panel-body" style="padding:10px;">
+            <table class="forumTable table table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Subject</th>
+                        <th style="text-align:left;">Created By</th>
+                        <th style="text-align:center;">Discussion Threads</th>
+                        <th style="text-align:center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (Forum f in forums.OrderByDescending(f => f.Created))
+                {
+                    string days, hours, mins;
+                    TimeUtility.LongAgo(out days, out hours, out mins, f.Created);
+                    
+                    <tr>
+                        <td style="width:60%;"><a href="~/manforums/?fid=@f.Id&@mineParam">@f.Name.ToUpper()</a></td>
+                        <td style="width:20%;text-align:center;font-weight:bold;">
+                            <table>
+                                <tr>
+                                    <td><a href="~/account/profile/?id=@f.Account.Id"><img src="~/profilepics/@f.Account.ProfilePic" style="height:30px;" /></a></td>
+                                    <td style="text-align:left;padding:5px;">
+                                        @f.Account.DisplayName<br />
+                                        @string.Format("{0} {1} {2} ago", days, hours, mins)
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width:10%;text-align:center;">@f.Topics.Count()</td>
+                        <td style="width:10%;text-align:center;"><a href="~/manforums/?fid=@f.Id&@mineParam"><span class="glyphicon glyphicon-eye-open" style="width:100%;"></span></a></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+    
+</div>
+
+<div id="addForumForm" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" method="post" action="~/manforums/create?@mineParam">
+                <div class="modal-header">
+                    <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                    Add New Subject
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="newforum-name" class="col-lg-2 control-label">Name</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="newforum-name" name="Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCreateForum" type="submit" class="createnewforumbtn btn btn-primary pull-right">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="addTopicForm" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" method="post" action="~/manforums/addtopic?@mineParam">
+                <div class="modal-header">
+                    <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                    Start Discussion Thread
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="newtopic-name" class="col-lg-2 control-label">Initiate Discussion</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" id="newtopic-name" name="Name" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCreateTopic" type="submit" class="createnewforumbtn btn btn-primary pull-right">Create</button>
+                </div>
+                <input name="ForumId" type="hidden" value="@forumId" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="addForumMsgForm" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" method="post" action="~/manforums/postmsg?@mineParam" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                    Post Comment
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="newforummsg-name" class="col-lg-2 control-label">Comment</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" id="newforummsg-name" name="Comment"></textarea><br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="newforummsg-photo" class="col-lg-2 control-label">Photo</label>
+                            <div class="col-lg-10">
+                                <input type="file" name="ForumMsgPhoto" /> (optional)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCreateForumMsg" type="submit" class="createnewforumbtn btn btn-primary pull-right">Post</button>
+                </div>
+                <input name="TopicId" type="hidden" value="@topicId" />
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+﻿body {
+    background: -webkit-linear-gradient(left top, #e7e7e7, #fff); /* For Safari */
+    background: -o-linear-gradient(bottom right, #e7e7e7, #fff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #e7e7e7, #fff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #e7e7e7, #fff); /* Standard syntax */
+    font-size: 1.2em;
+    color: #000;
+    font-family: Arial;
+    margin-top: 80px;
+    padding: 0px;
+}
+
+.logo-img
+{
+    height: 45px;
+    border: none;
+}
+
+.forgotpassword, .forgotpassword:active
+{
+    color: #fff;
+}
+
+input
+{
+    padding: 2px;
+}
+
+.navbar-fixed-top
+{
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.navbar
+{
+    background: -webkit-linear-gradient(left top, #142067, #0ff); /* For Safari */
+    background: -o-linear-gradient(bottom right, #142067, #0ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #142067, #0ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #142067, #0ff); /* Standard syntax */
+}
+
+.navbar a, .navbar a:active, .navbar a:visited
+{
+    color: #fff;
+    background-color: none;
+}
+
+.navbar a:hover
+{
+    color: #000;
+}
+
+#mainPanel
+{
+    padding: 10px;
+}
+
+.jumbotron
+{
+    background: -webkit-linear-gradient(left top, #142067, #0ff); /* For Safari */
+    background: -o-linear-gradient(bottom right, #142067, #0ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #142067, #0ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #142067, #0ff); /* Standard syntax */
+    opacity: 1;
+    padding: 10px;
+}
+
+.form-control
+{
+    margin: 10px;
+}
+
+.alert
+{
+    font-size: 16pt;
+}

@@ -1,0 +1,14 @@
+﻿@using Mancave.MancaveServices
+@{ Account acctCurrent = (Account)Session["User"];
+   
+    Layout = null;
+}
+
+<html>
+    <head>
+        <title>Mcave - @string.Format("{0}'s Radio Player", acctCurrent.DisplayName)</title>
+    </head>
+    <body>
+        @Html.Partial("ProfileRadio", Session["User"])
+    </body>
+</html>

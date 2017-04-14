@@ -1,0 +1,82 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    ViewBag.Title = "My Resume";
+
+    Account acctProfile = (Account)Model;
+
+    bool bRestricted = Session["Restricted"] != null;
+    bool bProfileView = Request.Url.ToString().ToLower().IndexOf("/account/profile") > -1;
+
+    string msg = (ViewBag.Msg != null) ? ViewBag.Msg.ToString() : string.Empty;
+}
+
+<div class="sectionTitle">@ViewBag.Title</div>
+
+<div id="divWarn" class="alert alert-info alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <div>@msg</div>
+</div>
+
+<div class="panel panel-default trans">
+    <div class="panel-body" style="padding:20px;">
+        @if(!bProfileView && !bRestricted){ <div><a href="#" data-toggle="collapse" data-target="#editPanel"><span class="pull-right glyphicon glyphicon-pencil"></span></a></div> }
+        <div id="editPanel" class="collapse">
+            <p style="font-size:16px;">Resume must be in PDF format<br /><b>TIP: </b>If resume is in MS WORD format, you can save your file as PDF in MS WORD (File > Save As > PDF).</p>
+            <form id="frmResume" class="form-inline" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="ResumeFile">Resume File</label>
+                    <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="file" id="ResumeFile" name="ResumeFile" style="margin-right:20px;" />
+                    <button @if(bRestricted){ <text>disabled="disabled"</text> } class="btn btn-md btn-primary">Save Resume</button>
+                </div>
+            
+                <br />
+                <br />
+
+                <label for="Skill">Skill</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" style="margin-right:20px;" type="text" id="Skill" name="Skill" placeholder="skill" />
+
+                <label for="Years">Years of Experience</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" style="margin-right:20px;width:50px;" type="text" id="Years" name="Years" placeholder="##"  />
+
+                <label for="LastUsed">Year Last Used    </label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" style="margin-right:20px;width:100px;" type="text" id="LastUsed" name="LastUsed" placeholder="####" />
+
+                <button @if(bRestricted){ <text>disabled="disabled"</text> } class="btn btn-md btn-primary">Add Skill</button>
+            </form>
+        </div>
+
+        <p>&nbsp;</p>
+        <div><b>RESUME: </b>
+            @if (!string.IsNullOrEmpty(acctProfile.ResumeFileName)) { 
+                <text><a target="_blank" href="~/resumes/@acctProfile.ResumeFileName">View Resume On File</a></text>
+            }
+            else{
+                <text>No file has been uploaded</text>
+            }
+        </div>
+        
+        <p>&nbsp;</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Years Experience</th>
+                    <th>Year Last Used</th>
+                    @if(!bProfileView){ <th>Action</th> }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AccountSkill skill in acctProfile.AccountSkills)
+                {
+                    <tr>
+                        <td>@skill.Skill</td>
+                        <td>@skill.Years</td>
+                        <td>@skill.LastUsed</td>
+                        @if(!bProfileView){ <td><a class="btn btn-sm btn-primary" href="?del=1&sid=@skill.Id"><span class="glyphicon glyphicon-remove"></span></a></td> }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

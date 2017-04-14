@@ -1,0 +1,141 @@
+﻿@using Mancave.MancaveServices
+@using Mancave.Helpers
+@model Account
+@{ Account acctMancave = (Account)Model;
+   Account acctCurrent = (Account)Session["User"];
+   
+   int postedByAccountId = acctCurrent.Id;
+   bool bRestricted = Session["Restricted"] != null ? true : false;
+
+   bool bPublicViewer = acctMancave.AccountFriends.SingleOrDefault(af => af.FriendId == acctCurrent.Id) != null ? false : true;
+   bPublicViewer = !(acctCurrent.Id == acctMancave.Id);
+}
+
+<form id="frmMcavePost" method="post" enctype="multipart/form-data">
+    
+    @if(!bRestricted && !bPublicViewer){
+    <div class="panel panel-default center-block" style="width:90%;">
+        <div class="panel-body">
+            <textarea style="border:none;" class="form-control" id="mcaveComment" placeholder="What's new? Post your thoughts, news, etc..."></textarea>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="col-sm-1">
+                <a href="#" data-span-img-label="spanMcaveImgFile" class="btnMcaveImg btn btn-default"><span class="glyphicon glyphicon-camera"></span></a>
+            </div>
+            <div class="col-sm-10">
+                <span id="spanMcaveImgFile" class="pull-left text-info"></span>
+                
+                @if(acctMancave.Id == acctCurrent.Id)
+                {
+                    <select class="pull-right form-control" style="width:auto;" id="selMcavePrivacy" name="Privacy">
+                        <option value="1" selected="selected">Friends</option>
+                        <option value="2">Public</option>
+                    </select>
+                }
+            </div>
+            <div class="col-sm-1">
+                <button type="submit" id="btnMcavePost" class="pull-right btn btn-sm btn-primary">Post</button>
+            </div>
+        </div>
+    </div>
+    }
+
+    <input type="hidden" id="Comment" name="Comment" />
+    <input type="hidden" name="MancaveAccountId" value="@acctMancave.Id" />
+    <input type="hidden" name="PostedByAccountId" value="@postedByAccountId" />
+    <input type="hidden" id="ParentAccountPostId" name="ParentAccountPostId" />
+    <input type="file" id="mcaveImg" name="Photo" style="visibility:hidden;"/>
+
+    @{
+        MancaveSvc mcaveSvc = new MancaveSvc();
+        ServiceCallResult scr;
+        List<AccountPost> aps = mcaveSvc.GetPostingsByMancave(acctMancave.Id, out scr);
+    }
+
+    @foreach(AccountPost ap in aps)
+    {
+
+        List<AccountPost> comments = mcaveSvc.GetCommentsByPosting(ap.Id, out scr);
+
+        string days, hours, mins;
+        TimeUtility.LongAgo(out days, out hours, out mins, ap.Created);
+
+        bool showPost = ap.PrivacyId == (int)PrivacyType.Public || (ap.PrivacyId == (int)PrivacyType.Friends && !bPublicViewer) || acctMancave.Id == acctCurrent.Id;
+        
+        if(showPost){
+            <div class="panel panel-default center-block" style="width:90%;">
+            <div class="panel-header clearfix" style="padding:10px;">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <img src="~/profilepics/@ap.Account1.ProfilePic" style="width:100%;" />
+                    </div>
+                    <div class="col-sm-10">
+                        <div><b>@ap.Account1.DisplayName</b></div>
+                        <div><b>@days @hours @mins ago</b></div>
+                        <hr />
+                        <div class="panel-body" style="padding:0px 0px 20px 0px;">
+                            <div style="margin:10px;">@ap.Comment</div>
+
+                            @if (!string.IsNullOrEmpty(ap.PhotoFile))
+                            {
+                                <div class="row">
+                                    <img src="~/photos/@ap.PhotoFile" style="height:200px;" />
+                                </div>
+                            }
+                        </div>
+                        
+                        @foreach (AccountPost comment in comments)
+                        {
+                            TimeUtility.LongAgo(out days, out hours, out mins, comment.Created);
+                            
+                            <div class="panel-footer clearfix" style="background-color:#fff;padding:20px;">
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <img src="~/profilepics/@comment.Account1.ProfilePic" style="width:100%;" />
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div><b>@comment.Account1.DisplayName</b></div>
+                                        <div><b>@days @hours @mins ago</b></div>
+                                        
+                                        <div style="margin:10px;">@comment.Comment</div>
+
+                                        @if (!string.IsNullOrEmpty(comment.PhotoFile))
+                                        {
+                                            <div class="row">
+                                                <img src="~/photos/@comment.PhotoFile" style="height:100px;" />
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="panel-footer clearfix">
+                            <div class="row">
+                                <div class="col-sm-1">
+                                    <img src="~/profilepics/@acctCurrent.ProfilePic" style="width:100%;" />
+                                </div>
+                                <div class="col-sm-9">
+                                    <textarea @if(bRestricted){ <text>disabled="disabled"</text> } style="border:none;" class="form-control" id="newcomment-@ap.Id" placeholder="Type your comment..."></textarea>
+                                </div>
+                                <div class="col-sm-1">
+                                    @if(!bRestricted){
+                                        <a href="#" data-span-img-label="spanImgLabel-@ap.Id" class="btnMcaveImg btn btn-default"><span class="glyphicon glyphicon-camera"></span></a>
+                                    }
+                                </div>
+                                <div class="col-sm-1">
+                                    <button @if(bRestricted){ <text>disabled="disabled"</text> } data-parent-id="@ap.Id" type="button" class="btnPostComment pull-right btn btn-sm btn-primary">Post</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span id="spanImgLabel-@ap.Id" class="pull-right text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    }
+
+</form>

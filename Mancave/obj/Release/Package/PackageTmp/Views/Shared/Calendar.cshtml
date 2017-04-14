@@ -1,0 +1,112 @@
+﻿@using Mancave.MancaveServices
+@using System.Text
+@model Account
+@{ Account acctCurrent = (Account)Model; }
+
+@{
+    //Set date info
+    DateTime dtMonthStart = new DateTime(ViewBag.Year, ViewBag.Month, 1);
+    string monthName = string.Format("{0:MMMM}", dtMonthStart).ToUpper();
+    int dayOfWeek = (int)dtMonthStart.DayOfWeek + 1;
+
+    MancaveEntities db = new MancaveEntities();
+    List<AccountCalendarEvent> events = db.AccountCalendarEvents.Where(ce => ce.EventDate.Year == dtMonthStart.Year && ce.EventDate.Month == dtMonthStart.Month && ce.AccountId == acctCurrent.Id).ToList();
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading panel-head1">
+        <div style="text-align:center;">
+            <a class="calendarLeftArrow pull-left" data-year="@dtMonthStart.AddMonths(-1).Year" data-month="@dtMonthStart.AddMonths(-1).Month" href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <span style="font-size:12pt;">@dtMonthStart.Year</span>
+            <a class="calendarRightArrow pull-right" data-year="@dtMonthStart.AddMonths(1).Year" data-month="@dtMonthStart.AddMonths(1).Month" href="#"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+        <div style="text-align:center;" id="monthName">@monthName</div>
+  </div>
+  <div class="panel-body" style="padding:0px;margin:0px;">
+    <table id="tblCalendarRightPanel" style="width:100%;margin:0px;">
+        <thead>
+            <tr>
+                <th>SUN</th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int cell = 1;
+                int day = 1;
+                bool bValidDay = false;
+                int daysInMonth = DateTime.DaysInMonth(dtMonthStart.Year, dtMonthStart.Month);
+                
+                //5 weeks
+                for(int week = 1; week < 7; week++)
+                {
+                    <tr>
+                        @for (int weekday = 1; weekday < 8; weekday++)
+                        {
+                            if ( (dayOfWeek == weekday || bValidDay) && (day < daysInMonth + 1) )
+                            {
+                                StringBuilder sbTooltip = new StringBuilder();
+                                IEnumerable<AccountCalendarEvent> eventsForDay = events.Where(e => e.EventDate.Day == day);
+                                foreach(AccountCalendarEvent dayEvent in eventsForDay)
+                                {
+                                    sbTooltip.Append(string.Format("<b>{0:hh:mm tt}</b> - {1}", dayEvent.EventDate, dayEvent.EventName));
+                                    sbTooltip.Append("<hr/>");
+                                }
+                                
+                                <td class="calendarCell" @if(!string.IsNullOrEmpty(sbTooltip.ToString())){ <text>style="background-color:#eee;"</text> }>
+                                    <a href="~/calendar/?day=@day&month=@dtMonthStart.Month&year=@dtMonthStart.Year" data-container="body" data-toggle="popover" data-placement="left" data-html="true" data-content="@sbTooltip.ToString()">
+                                        @day
+                                    </a>
+                                </td>
+                                bValidDay = true;
+                                day++;
+                            }
+                            else{
+                                <td class="calendarCell">&nbsp;</td>
+                            }
+
+                            cell++;
+                        }
+                    </tr>
+                }
+            }
+            <tr></tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Calendar Form -->
+<form method="post" action="~/account/addcalendarevent">
+    <div id="calendarForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Calendar Event for <span id="calendarDayTitle"></span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="back-img" class="col-lg-2 control-label">Event</label>
+                            <div class="col-lg-10">
+                                <textarea id="calendarDescription" name="calendarDescription" class="form-control" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="calendareventbtn btn btn-primary pull-right">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="calendarEventDay" name="calendarEventDay" />
+    <input type="hidden" id="calendarEventMonth" name="calendarEventMonth" />
+    <input type="hidden" id="calendarEventYear" name="calendarEventYear" />
+</form>

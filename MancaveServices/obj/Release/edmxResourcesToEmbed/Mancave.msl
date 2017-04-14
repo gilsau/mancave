@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MancaveModelStoreContainer" CdmEntityContainer="MancaveEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="MancaveModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="HerEmail" ColumnName="HerEmail" />
+          <ScalarProperty Name="HerPassword" ColumnName="HerPassword" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="BackgroundImage" ColumnName="BackgroundImage" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpired" ColumnName="TokenExpired" />
+          <ScalarProperty Name="HerToken" ColumnName="HerToken" />
+          <ScalarProperty Name="HerTokenExpired" ColumnName="HerTokenExpired" />
+          <ScalarProperty Name="WifesPageTitle" ColumnName="WifesPageTitle" />
+          <ScalarProperty Name="WifesPageUrl" ColumnName="WifesPageUrl" />
+          <ScalarProperty Name="ResumeFileName" ColumnName="ResumeFileName" />
+          <ScalarProperty Name="HeaderBackColor1" ColumnName="HeaderBackColor1" />
+          <ScalarProperty Name="HeaderBackColor2" ColumnName="HeaderBackColor2" />
+          <ScalarProperty Name="HeaderFontColor" ColumnName="HeaderFontColor" />
+          <ScalarProperty Name="LeftPanelBackColor1" ColumnName="LeftPanelBackColor1" />
+          <ScalarProperty Name="LeftPanelBackColor2" ColumnName="LeftPanelBackColor2" />
+          <ScalarProperty Name="LeftPanelFontColor" ColumnName="LeftPanelFontColor" />
+          <ScalarProperty Name="RightPanelBackColor1" ColumnName="RightPanelBackColor1" />
+          <ScalarProperty Name="RightPanelBackColor2" ColumnName="RightPanelBackColor2" />
+          <ScalarProperty Name="RightPanelFontColor" ColumnName="RightPanelFontColor" />
+          <ScalarProperty Name="MainPanelBackImgTransparency" ColumnName="MainPanelBackImgTransparency" />
+          <ScalarProperty Name="MainPanelPanelsTransparency" ColumnName="MainPanelPanelsTransparency" />
+          <ScalarProperty Name="MainPanelFontColor" ColumnName="MainPanelFontColor" />
+          <ScalarProperty Name="MancaveTile1Name" ColumnName="MancaveTile1Name" />
+          <ScalarProperty Name="MancaveTile1Url" ColumnName="MancaveTile1Url" />
+          <ScalarProperty Name="MancaveTile1Img" ColumnName="MancaveTile1Img" />
+          <ScalarProperty Name="MancaveTile2Name" ColumnName="MancaveTile2Name" />
+          <ScalarProperty Name="MancaveTile2Url" ColumnName="MancaveTile2Url" />
+          <ScalarProperty Name="MancaveTile2Img" ColumnName="MancaveTile2Img" />
+          <ScalarProperty Name="MancaveTile3Name" ColumnName="MancaveTile3Name" />
+          <ScalarProperty Name="MancaveTile3Url" ColumnName="MancaveTile3Url" />
+          <ScalarProperty Name="MancaveTile3Img" ColumnName="MancaveTile3Img" />
+          <ScalarProperty Name="MancaveTile4Name" ColumnName="MancaveTile4Name" />
+          <ScalarProperty Name="MancaveTile4Url" ColumnName="MancaveTile4Url" />
+          <ScalarProperty Name="MancaveTile4Img" ColumnName="MancaveTile4Img" />
+          <ScalarProperty Name="MancaveTile5Name" ColumnName="MancaveTile5Name" />
+          <ScalarProperty Name="MancaveTile5Url" ColumnName="MancaveTile5Url" />
+          <ScalarProperty Name="MancaveTile5Img" ColumnName="MancaveTile5Img" />
+          <ScalarProperty Name="MancaveTile6Name" ColumnName="MancaveTile6Name" />
+          <ScalarProperty Name="MancaveTile6Url" ColumnName="MancaveTile6Url" />
+          <ScalarProperty Name="MancaveTile6Img" ColumnName="MancaveTile6Img" />
+          <ScalarProperty Name="RadioEmbedCode" ColumnName="RadioEmbedCode" />
+          <ScalarProperty Name="RadioPosition" ColumnName="RadioPosition" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountCalendarEvents">
+      <EntityTypeMapping TypeName="MancaveModel.AccountCalendarEvent">
+        <MappingFragment StoreEntitySet="AccountCalendarEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountFavSites">
+      <EntityTypeMapping TypeName="MancaveModel.AccountFavSite">
+        <MappingFragment StoreEntitySet="AccountFavSite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="FavSite" ColumnName="FavSite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountFriends">
+      <EntityTypeMapping TypeName="MancaveModel.AccountFriend">
+        <MappingFragment StoreEntitySet="AccountFriend">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="FriendId" ColumnName="FriendId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountPhotoes">
+      <EntityTypeMapping TypeName="MancaveModel.AccountPhoto">
+        <MappingFragment StoreEntitySet="AccountPhoto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PhotoFile" ColumnName="PhotoFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountPosts">
+      <EntityTypeMapping TypeName="MancaveModel.AccountPost">
+        <MappingFragment StoreEntitySet="AccountPost">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentAccountPostId" ColumnName="ParentAccountPostId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="PostedByAccountId" ColumnName="PostedByAccountId" />
+          <ScalarProperty Name="PhotoFile" ColumnName="PhotoFile" />
+          <ScalarProperty Name="VideoUrl" ColumnName="VideoUrl" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="PrivacyId" ColumnName="PrivacyId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountSkills">
+      <EntityTypeMapping TypeName="MancaveModel.AccountSkill">
+        <MappingFragment StoreEntitySet="AccountSkill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+          <ScalarProperty Name="Years" ColumnName="Years" />
+          <ScalarProperty Name="LastUsed" ColumnName="LastUsed" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountVideos">
+      <EntityTypeMapping TypeName="MancaveModel.AccountVideo">
+        <MappingFragment StoreEntitySet="AccountVideo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actions">
+      <EntityTypeMapping TypeName="MancaveModel.Action">
+        <MappingFragment StoreEntitySet="Action">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="MancaveModel.Album">
+        <MappingFragment StoreEntitySet="Album">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommMethods">
+      <EntityTypeMapping TypeName="MancaveModel.CommMethod">
+        <MappingFragment StoreEntitySet="CommMethod">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Communications">
+      <EntityTypeMapping TypeName="MancaveModel.Communication">
+        <MappingFragment StoreEntitySet="Communication">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CommMethodId" ColumnName="CommMethodId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="FromAcctId" ColumnName="FromAcctId" />
+          <ScalarProperty Name="ToAcctId" ColumnName="ToAcctId" />
+          <ScalarProperty Name="StatusToId" ColumnName="StatusToId" />
+          <ScalarProperty Name="ConversationId" ColumnName="ConversationId" />
+          <ScalarProperty Name="SubjectTo" ColumnName="SubjectTo" />
+          <ScalarProperty Name="MessageTo" ColumnName="MessageTo" />
+          <ScalarProperty Name="MessageToEmail" ColumnName="MessageToEmail" />
+          <ScalarProperty Name="MessageToTxtMsg" ColumnName="MessageToTxtMsg" />
+          <ScalarProperty Name="MessageToEmailSent" ColumnName="MessageToEmailSent" />
+          <ScalarProperty Name="MessageToTxtMsgSent" ColumnName="MessageToTxtMsgSent" />
+          <ScalarProperty Name="Archived" ColumnName="Archived" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="MancaveModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fora">
+      <EntityTypeMapping TypeName="MancaveModel.Forum">
+        <MappingFragment StoreEntitySet="Forum">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OwnerAccountId" ColumnName="OwnerAccountId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForumMessages">
+      <EntityTypeMapping TypeName="MancaveModel.ForumMessage">
+        <MappingFragment StoreEntitySet="ForumMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="PhotoFile" ColumnName="PhotoFile" />
+          <ScalarProperty Name="ParentForumMessageId" ColumnName="ParentForumMessageId" />
+          <ScalarProperty Name="OwnerAccountId" ColumnName="OwnerAccountId" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="MancaveModel.Game">
+        <MappingFragment StoreEntitySet="Game">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GameCategory" ColumnName="GameCategory" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="EmbedCode" ColumnName="EmbedCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Privacies">
+      <EntityTypeMapping TypeName="MancaveModel.Privacy">
+        <MappingFragment StoreEntitySet="Privacy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="MancaveModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="MancaveModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Topics">
+      <EntityTypeMapping TypeName="MancaveModel.Topic">
+        <MappingFragment StoreEntitySet="Topic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OwnerAccountId" ColumnName="OwnerAccountId" />
+          <ScalarProperty Name="ForumId" ColumnName="ForumId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

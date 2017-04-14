@@ -1,0 +1,16 @@
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Debug\MancaveServices.csprojResolveAssemblyReference.cache
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\Mancave.MancaveServices.dll.config
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\Mancave.MancaveServices.dll
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\Mancave.MancaveServices.pdb
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\EntityFramework.dll
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\EntityFramework.xml
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Debug\Mancave.MancaveServices.dll
+E:\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Debug\Mancave.MancaveServices.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\Mancave.MancaveServices.dll.config
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\Mancave.MancaveServices.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\Mancave.MancaveServices.pdb
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\EntityFramework.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\bin\Debug\EntityFramework.xml
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Debug\MancaveServices.csprojResolveAssemblyReference.cache
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Debug\Mancave.MancaveServices.dll
+C:\Passport Recovered Files\_Web Development\Equity Apps\Mancave\MancaveServices\obj\Debug\Mancave.MancaveServices.pdb

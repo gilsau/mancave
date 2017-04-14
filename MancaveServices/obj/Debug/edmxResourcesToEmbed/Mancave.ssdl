@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MancaveModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MancaveModelStoreContainer">
+    <EntitySet Name="Account" EntityType="MancaveModel.Store.Account" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountCalendarEvent" EntityType="MancaveModel.Store.AccountCalendarEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountFavSite" EntityType="MancaveModel.Store.AccountFavSite" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountFriend" EntityType="MancaveModel.Store.AccountFriend" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountPhoto" EntityType="MancaveModel.Store.AccountPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountPost" EntityType="MancaveModel.Store.AccountPost" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountSkill" EntityType="MancaveModel.Store.AccountSkill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountVideo" EntityType="MancaveModel.Store.AccountVideo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Action" EntityType="MancaveModel.Store.Action" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Album" EntityType="MancaveModel.Store.Album" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommMethod" EntityType="MancaveModel.Store.CommMethod" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Communication" EntityType="MancaveModel.Store.Communication" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Country" EntityType="MancaveModel.Store.Country" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Forum" EntityType="MancaveModel.Store.Forum" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ForumMessage" EntityType="MancaveModel.Store.ForumMessage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Game" EntityType="MancaveModel.Store.Game" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Privacy" EntityType="MancaveModel.Store.Privacy" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="State" EntityType="MancaveModel.Store.State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Status" EntityType="MancaveModel.Store.Status" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Topic" EntityType="MancaveModel.Store.Topic" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_Account_Country" Association="MancaveModel.Store.fk_Account_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Account_State" Association="MancaveModel.Store.fk_Account_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Account_Status" Association="MancaveModel.Store.fk_Account_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountCalendarEvent_Account" Association="MancaveModel.Store.fk_AccountCalendarEvent_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountCalendarEvent" EntitySet="AccountCalendarEvent" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountFavSite_Account" Association="MancaveModel.Store.fk_AccountFavSite_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountFavSite" EntitySet="AccountFavSite" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountFriend_Account" Association="MancaveModel.Store.fk_AccountFriend_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountFriend" EntitySet="AccountFriend" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountFriend_Friend" Association="MancaveModel.Store.fk_AccountFriend_Friend">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountFriend" EntitySet="AccountFriend" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountPhoto_Account" Association="MancaveModel.Store.fk_AccountPhoto_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountPhoto" EntitySet="AccountPhoto" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountPhoto_Album" Association="MancaveModel.Store.fk_AccountPhoto_Album">
+      <End Role="Album" EntitySet="Album" />
+      <End Role="AccountPhoto" EntitySet="AccountPhoto" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountPost_Account" Association="MancaveModel.Store.fk_AccountPost_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountPost" EntitySet="AccountPost" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountPost_ParentPost" Association="MancaveModel.Store.fk_AccountPost_ParentPost">
+      <End Role="AccountPost" EntitySet="AccountPost" />
+      <End Role="AccountPost1" EntitySet="AccountPost" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountPost_PostedBy" Association="MancaveModel.Store.fk_AccountPost_PostedBy">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountPost" EntitySet="AccountPost" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountPost_Privacy" Association="MancaveModel.Store.fk_AccountPost_Privacy">
+      <End Role="Privacy" EntitySet="Privacy" />
+      <End Role="AccountPost" EntitySet="AccountPost" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountSkill_Account" Association="MancaveModel.Store.fk_AccountSkill_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountSkill" EntitySet="AccountSkill" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountVideo_Account" Association="MancaveModel.Store.fk_AccountVideo_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountVideo" EntitySet="AccountVideo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountVideo_Album" Association="MancaveModel.Store.fk_AccountVideo_Album">
+      <End Role="Album" EntitySet="Album" />
+      <End Role="AccountVideo" EntitySet="AccountVideo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Account_From" Association="MancaveModel.Store.fk_Communication_Account_From">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Account_To" Association="MancaveModel.Store.fk_Communication_Account_To">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_Action" Association="MancaveModel.Store.fk_Communication_Action">
+      <End Role="Action" EntitySet="Action" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_CommMethod" Association="MancaveModel.Store.fk_Communication_CommMethod">
+      <End Role="CommMethod" EntitySet="CommMethod" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Communication_StatusTo" Association="MancaveModel.Store.fk_Communication_StatusTo">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Communication" EntitySet="Communication" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Forum_Owner" Association="MancaveModel.Store.fk_Forum_Owner">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Forum" EntitySet="Forum" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ForumMessage_Owner" Association="MancaveModel.Store.fk_ForumMessage_Owner">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ForumMessage" EntitySet="ForumMessage" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ForumMessage_Parent" Association="MancaveModel.Store.fk_ForumMessage_Parent">
+      <End Role="ForumMessage" EntitySet="ForumMessage" />
+      <End Role="ForumMessage1" EntitySet="ForumMessage" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ForumMessage_Topic" Association="MancaveModel.Store.fk_ForumMessage_Topic">
+      <End Role="Topic" EntitySet="Topic" />
+      <End Role="ForumMessage" EntitySet="ForumMessage" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Topic_Forum" Association="MancaveModel.Store.fk_Topic_Forum">
+      <End Role="Forum" EntitySet="Forum" />
+      <End Role="Topic" EntitySet="Topic" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Topic_Owner" Association="MancaveModel.Store.fk_Topic_Owner">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Topic" EntitySet="Topic" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HerEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="HerPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="Zipcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="ProfilePic" Type="nvarchar" MaxLength="100" />
+    <Property Name="BackgroundImage" Type="nvarchar" MaxLength="100" />
+    <Property Name="Token" Type="uniqueidentifier" />
+    <Property Name="TokenExpired" Type="bit" />
+    <Property Name="HerToken" Type="uniqueidentifier" />
+    <Property Name="HerTokenExpired" Type="bit" />
+    <Property Name="WifesPageTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="WifesPageUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResumeFileName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HeaderBackColor1" Type="nvarchar" MaxLength="30" />
+    <Property Name="HeaderBackColor2" Type="nvarchar" MaxLength="30" />
+    <Property Name="HeaderFontColor" Type="nvarchar" MaxLength="30" />
+    <Property Name="LeftPanelBackColor1" Type="nvarchar" MaxLength="30" />
+    <Property Name="LeftPanelBackColor2" Type="nvarchar" MaxLength="30" />
+    <Property Name="LeftPanelFontColor" Type="nvarchar" MaxLength="30" />
+    <Property Name="RightPanelBackColor1" Type="nvarchar" MaxLength="30" />
+    <Property Name="RightPanelBackColor2" Type="nvarchar" MaxLength="30" />
+    <Property Name="RightPanelFontColor" Type="nvarchar" MaxLength="30" />
+    <Property Name="MainPanelBackImgTransparency" Type="int" />
+    <Property Name="MainPanelPanelsTransparency" Type="int" />
+    <Property Name="MainPanelFontColor" Type="nvarchar" MaxLength="30" />
+    <Property Name="MancaveTile1Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile1Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile1Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile2Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile2Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile2Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile3Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile3Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile3Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile4Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile4Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile4Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile5Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile5Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile5Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile6Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile6Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="MancaveTile6Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="RadioEmbedCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="RadioPosition" Type="int" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AccountCalendarEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="EventName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EventDescription" Type="text" />
+    <Property Name="EventDate" Type="datetime" Nullable="false" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="AccountFavSite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="FavSite" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountFriend">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="FriendId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountPhoto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="text" />
+    <Property Name="PhotoFile" Type="nvarchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="AccountPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentAccountPostId" Type="int" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="PostedByAccountId" Type="int" Nullable="false" />
+    <Property Name="PhotoFile" Type="nvarchar" MaxLength="100" />
+    <Property Name="VideoUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="Comment" Type="text" />
+    <Property Name="PrivacyId" Type="int" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountSkill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="Skill" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Years" Type="int" />
+    <Property Name="LastUsed" Type="int" />
+    <Property Name="DisplayOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="AccountVideo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Url" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Action">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Album">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CommMethod">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Communication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CommMethodId" Type="int" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="FromAcctId" Type="int" Nullable="false" />
+    <Property Name="ToAcctId" Type="int" Nullable="false" />
+    <Property Name="StatusToId" Type="int" Nullable="false" />
+    <Property Name="ConversationId" Type="uniqueidentifier" />
+    <Property Name="SubjectTo" Type="nvarchar" MaxLength="250" />
+    <Property Name="MessageTo" Type="text" />
+    <Property Name="MessageToEmail" Type="text" />
+    <Property Name="MessageToTxtMsg" Type="text" />
+    <Property Name="MessageToEmailSent" Type="bit" />
+    <Property Name="MessageToTxtMsgSent" Type="bit" />
+    <Property Name="Archived" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Forum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OwnerAccountId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ForumMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Message" Type="text" Nullable="false" />
+    <Property Name="PhotoFile" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentForumMessageId" Type="int" />
+    <Property Name="OwnerAccountId" Type="int" Nullable="false" />
+    <Property Name="TopicId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GameCategory" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Logo" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Instructions" Type="text" />
+    <Property Name="EmbedCode" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Privacy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Icon" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Color" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Topic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="OwnerAccountId" Type="int" Nullable="false" />
+    <Property Name="ForumId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_Account_Country">
+    <End Role="Country" Type="MancaveModel.Store.Country" Multiplicity="0..1" />
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Account_State">
+    <End Role="State" Type="MancaveModel.Store.State" Multiplicity="0..1" />
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Account_Status">
+    <End Role="Status" Type="MancaveModel.Store.Status" Multiplicity="0..1" />
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountCalendarEvent_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountCalendarEvent" Type="MancaveModel.Store.AccountCalendarEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountCalendarEvent">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountFavSite_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountFavSite" Type="MancaveModel.Store.AccountFavSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountFavSite">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountFriend_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountFriend" Type="MancaveModel.Store.AccountFriend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountFriend">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountFriend_Friend">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountFriend" Type="MancaveModel.Store.AccountFriend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountFriend">
+        <PropertyRef Name="FriendId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountPhoto_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountPhoto" Type="MancaveModel.Store.AccountPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPhoto">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountPhoto_Album">
+    <End Role="Album" Type="MancaveModel.Store.Album" Multiplicity="1" />
+    <End Role="AccountPhoto" Type="MancaveModel.Store.AccountPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Album">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPhoto">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountPost_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountPost" Type="MancaveModel.Store.AccountPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPost">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountPost_ParentPost">
+    <End Role="AccountPost" Type="MancaveModel.Store.AccountPost" Multiplicity="0..1" />
+    <End Role="AccountPost1" Type="MancaveModel.Store.AccountPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountPost">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPost1">
+        <PropertyRef Name="ParentAccountPostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountPost_PostedBy">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountPost" Type="MancaveModel.Store.AccountPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPost">
+        <PropertyRef Name="PostedByAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountPost_Privacy">
+    <End Role="Privacy" Type="MancaveModel.Store.Privacy" Multiplicity="0..1" />
+    <End Role="AccountPost" Type="MancaveModel.Store.AccountPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Privacy">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPost">
+        <PropertyRef Name="PrivacyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountSkill_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountSkill" Type="MancaveModel.Store.AccountSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountSkill">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountVideo_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountVideo" Type="MancaveModel.Store.AccountVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountVideo">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountVideo_Album">
+    <End Role="Album" Type="MancaveModel.Store.Album" Multiplicity="1" />
+    <End Role="AccountVideo" Type="MancaveModel.Store.AccountVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Album">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountVideo">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Account_From">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="Communication" Type="MancaveModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="FromAcctId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Account_To">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="Communication" Type="MancaveModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="ToAcctId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_Action">
+    <End Role="Action" Type="MancaveModel.Store.Action" Multiplicity="1" />
+    <End Role="Communication" Type="MancaveModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Action">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_CommMethod">
+    <End Role="CommMethod" Type="MancaveModel.Store.CommMethod" Multiplicity="0..1" />
+    <End Role="Communication" Type="MancaveModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommMethod">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="CommMethodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Communication_StatusTo">
+    <End Role="Status" Type="MancaveModel.Store.Status" Multiplicity="1" />
+    <End Role="Communication" Type="MancaveModel.Store.Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Communication">
+        <PropertyRef Name="StatusToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Forum_Owner">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="Forum" Type="MancaveModel.Store.Forum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Forum">
+        <PropertyRef Name="OwnerAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ForumMessage_Owner">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="ForumMessage" Type="MancaveModel.Store.ForumMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ForumMessage">
+        <PropertyRef Name="OwnerAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ForumMessage_Parent">
+    <End Role="ForumMessage" Type="MancaveModel.Store.ForumMessage" Multiplicity="0..1" />
+    <End Role="ForumMessage1" Type="MancaveModel.Store.ForumMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ForumMessage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ForumMessage1">
+        <PropertyRef Name="ParentForumMessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ForumMessage_Topic">
+    <End Role="Topic" Type="MancaveModel.Store.Topic" Multiplicity="1" />
+    <End Role="ForumMessage" Type="MancaveModel.Store.ForumMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topic">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ForumMessage">
+        <PropertyRef Name="TopicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Topic_Forum">
+    <End Role="Forum" Type="MancaveModel.Store.Forum" Multiplicity="1" />
+    <End Role="Topic" Type="MancaveModel.Store.Topic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Forum">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Topic">
+        <PropertyRef Name="ForumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Topic_Owner">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="Topic" Type="MancaveModel.Store.Topic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Topic">
+        <PropertyRef Name="OwnerAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

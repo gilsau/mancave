@@ -1,0 +1,123 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{ Account acctCurrent = (Account)Model;
+
+   bool bWifeExists = !string.IsNullOrEmpty(acctCurrent.HerEmail) ? true : false;
+   
+   Account acct = (Account)Session["User"];
+
+   ServiceCallResult scrConvos;
+   IEnumerable<Conversation> convos = CommSvc.GetMyConversations(true, 5, out scrConvos);
+
+   ServiceCallResult scrNotes;
+   IEnumerable<Communication> notes = CommSvc.GetMyNotifications(5, out scrNotes);
+}
+
+<style>
+    #leftPanel
+    {
+        background:-webkit-linear-gradient(left top,@acctCurrent.LeftPanelBackColor1,@acctCurrent.LeftPanelBackColor2); /* For Safari */
+        background:o-linear-gradient(bottom right,@acctCurrent.LeftPanelBackColor1,@acctCurrent.LeftPanelBackColor2); /* For Opera 11.1 to 12.0 */
+        background:-moz-linear-gradient(bottom right,@acctCurrent.LeftPanelBackColor1,@acctCurrent.LeftPanelBackColor2); /* For Firefox 3.6 to 15 */
+        background:linear-gradient(to bottom right,@acctCurrent.LeftPanelBackColor1,@acctCurrent.LeftPanelBackColor2); /* Standard syntax */
+        color:@acctCurrent.LeftPanelFontColor;
+    }
+</style>
+
+<div style="padding:0px;margin:5px;">
+    <div class="row">
+        <div class="col-md-4" style="padding:0px;">
+            <div class="dropdown">
+                <a class="dropdown-toggle input-group-addon glyphicon glyphicon-envelope" data-toggle="dropdown">&nbsp;<b>@convos.Count()</b></a>
+                <ul class="dropdown-menu">
+                    @Html.Partial("~/Views/Messages/LeftPanelMsgDropDown.cshtml", convos)
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding:0px;">
+            <div class="dropdown">
+                <a class="dropdown-toggle input-group-addon glyphicon glyphicon-check" data-toggle="dropdown">&nbsp;<b>@notes.Count()</b></a>
+                <ul class="dropdown-menu">
+                    @Html.Partial("~/Views/Messages/LeftPanelNotesDropDown.cshtml", notes)
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding:0px;">
+            <div class="dropdown">
+                <a class="dropdown-toggle input-group-addon glyphicon glyphicon-user" data-toggle="dropdown"></a>
+                <ul class="dropdown-menu">
+                    <li><a href="~/account/profile"><span style="width:15px;" class="glyphicon glyphicon-user"></span> Profile</a></li>
+                    <li><a href="~/account/login?logout=1"><span style="width:15px;" class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="width:100%;">
+    <div style="display:inline-block;vertical-align:top;"><img style="vertical-align:top;" class="circularProfilePic" src="~/profilepics/@acctCurrent.ProfilePic" /></div>
+    <div style="display:inline-block;color:#fff;font-size:20px;padding-top:20px;">
+        <div>@acctCurrent.DisplayName</div>
+        <div style="font-size:14px;">
+            @{ string stateName = acctCurrent.State == null ? string.Empty : ", " + acctCurrent.State.Abbrev; }
+            @string.Format("{0}{1}", acctCurrent.City, stateName)
+        </div>
+        <div style="font-size:14px;">
+            @{ string countryName = acctCurrent.Country == null ? string.Empty : acctCurrent.Country.Abbrev; }
+            @countryName
+        </div>
+    </div>
+</div>
+
+<div class="panel" style="margin:10px 0px 10px 0px;">
+    <div class="panel-body">
+        <div class="page-header"><img src="~/images/icon_person.jpg" style="width:30px;" />&nbsp;PERSONAL</div>
+        <ul class="nav nav-stacked" style="margin:0px;padding:0px;">
+            @if(bWifeExists){ <li><a target="_blank" href="@acctCurrent.WifesPageUrl")">@acctCurrent.WifesPageTitle</a></li> }
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("personal/resume") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/personal/resume")">My Resume</a></li>
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("personal/favsites") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/personal/favsites")">My Favorite Sites<div class="badge pull-right">@acctCurrent.AccountFavSites.Count()</div></a></li>
+        </ul>
+    </div>
+</div>
+<div class="panel" style="margin:10px 0px 10px 0px;">
+    <div class="panel-body">
+        <div class="page-header"><img src="~/images/icon_friends.jpg" style="width:30px;" />&nbsp;GET SOCIAL</div>
+        <ul class="nav nav-stacked" style="margin:0px;padding:0px;">
+            <!--<li class="@( Request.Url.ToString().ToLower().IndexOf("social/friendfeed") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/social/friendfeed")">Friend Feed<div class="badge pull-right">0</div></a></li>-->
+            <!--<li class="@( Request.Url.ToString().ToLower().IndexOf("social/publicfeed") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/social/publicfeed")">Public Feed<div class="badge pull-right">0</div></a></li>-->
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("manforums/?mine=1") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/manforums/?mine=1")">My Forums<div class="badge pull-right">@acctCurrent.Fora.Where(f => f.Account.Id == acctCurrent.Id).Count()</div></a></li>
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("social/friends") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/social/friends")">My Friends<div class="badge pull-right">@acctCurrent.AccountFriends.Count()</div></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="panel" style="margin:10px 0px 10px 0px;">
+    <div class="panel-body">
+        <div class="page-header"><img src="~/images/icon_media.jpg" style="width:30px;" />&nbsp;MEDIA</div>
+        <ul class="nav nav-stacked" style="margin:0px;padding:0px;">
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("media/radio") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/media/radio")">My Radio</a></li>
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("media/photos") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/media/photos")">My Photos<div class="badge pull-right">@acctCurrent.AccountPhotoes.Count()</div></a></li>
+            <li class="@( Request.Url.ToString().ToLower().IndexOf("media/videos") > -1 ? "active" : string.Empty )" ><a href="@Url.Content("~/media/videos")">My Videos<div class="badge pull-right">@acctCurrent.AccountVideos.Count()</div></a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ESPN Sports Ticker -->
+<div>
+    <!-- start feedwind code --><script type="text/javascript">document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js"><' + '/script>');</script><script type="text/javascript">                                    (function () { var params = { rssmikle_url: "http://search.espn.go.com/rss-feed/", rssmikle_frame_width: "100%", rssmikle_frame_height: "400", rssmikle_target: "_blank", rssmikle_font: "Arial, Helvetica, sans-serif", rssmikle_font_size: "12", rssmikle_border: "off", responsive: "off", rssmikle_css_url: "", text_align: "left", text_align2: "left", corner: "off", scrollbar: "off", autoscroll: "on", scrolldirection: "up", scrollstep: "3", mcspeed: "20", sort: "New", rssmikle_title: "on", rssmikle_title_sentence: "ESPN Sports News", rssmikle_title_link: "", rssmikle_title_bgcolor: "#0066FF", rssmikle_title_color: "#FFFFFF", rssmikle_title_bgimage: "", rssmikle_item_bgcolor: "#FFFFFF", rssmikle_item_bgimage: "", rssmikle_item_title_length: "55", rssmikle_item_title_color: "#0066FF", rssmikle_item_border_bottom: "on", rssmikle_item_description: "on", item_link: "off", rssmikle_item_description_length: "150", rssmikle_item_description_color: "#666666", rssmikle_item_date: "gl1", rssmikle_timezone: "Etc/GMT", datetime_format: "%b %e, %Y %l:%M:%S %p", rssmikle_item_description_tag: "off", rssmikle_item_description_image_scaling: "off", article_num: "15", rssmikle_item_podcast: "off", keyword_inc: "", keyword_exc: "" }; feedwind_show_widget_iframe(params); })();</script><div style="font-size:10px; text-align:center; width:300;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code -->
+</div>
+
+<!--
+<div class="panel" style="margin:10px 0px 10px 0px;">
+    <div class="panel-body">
+        <div class="page-header"><img src="~/images/icon_dollar.jpg" style="width:30px;" />&nbsp;COMMERCE</div>
+        <ul class="nav nav-stacked" style="margin:0px;padding:0px;">
+            <li><a href="@Url.Content("~/commerce/buy")">Search/Buy Items for Sale</a></li>
+            <li><a href="@Url.Content("~/commerce/sell")">My Items for Sale<div class="navCount">15</div></a></li>
+            <li><a href="@Url.Content("~/commerce/trade")">My Items for Trade<div class="navCount">15</div></a></li>
+            <li><a href="@Url.Content("~/commerce/auctionsites")">My Auction Sites<div class="navCount">4</div></a></li>
+            <li><a href="@Url.Content("~/commerce/tradingsites")">My Trading Sites<div class="navCount">3</div></a></li>
+        </ul>
+    </div>
+</div>
+-->

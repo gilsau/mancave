@@ -1,0 +1,1129 @@
+
+*************************************************************************************************
+2014.12.02 16:26:52 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:04c2ca8a-838e-4006-bcd3-cd1ba5a0223b --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection)
+   at Mancave.MancaveServices.StatusSvc.GetAllAccountStatuses(ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 20
+
+*************************************************************************************************
+2014.12.02 16:31:00 ||| Not Available ||| Not Available ||| MESSAGE:The context cannot be used while the model is being created. --- INNER-EXCEPTION: --- SOURCE:EntityFramework --- STACK-TRACE:   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   at System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   at Mancave.MancaveServices.CommSvc.GetMyConversations(Boolean newMessages, Int32 howMany, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\CommSvc.cs:line 106
+
+*************************************************************************************************
+2014.12.02 16:33:56 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:33:59 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:34:06 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:34:06 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:34:06 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:34:28 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:34:58 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:35:29 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:35:58 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:36:28 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:36:58 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:37:31 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:38:02 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:38:29 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:38:59 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:39:30 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:40:01 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:40:28 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:41:00 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:41:30 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:42:00 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:42:30 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:42:58 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:43:30 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:44:01 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:44:30 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:45:01 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:45:31 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:45:45 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:e41a8ce0-a65f-4082-bd65-40b23281a4d1 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 177
+
+*************************************************************************************************
+2014.12.02 16:45:50 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:e41a8ce0-a65f-4082-bd65-40b23281a4d1 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String email, String herEmail, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 279
+
+*************************************************************************************************
+2014.12.02 16:45:59 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:46:29 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:47:00 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:47:29 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:47:57 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:48:32 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:48:48 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:58f61a36-08d4-4a7a-85de-1628dab20fac --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 177
+
+*************************************************************************************************
+2014.12.02 16:48:48 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:58f61a36-08d4-4a7a-85de-1628dab20fac --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String email, String herEmail, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 279
+
+*************************************************************************************************
+2014.12.02 16:48:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:49:22 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:49:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:50:23 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:50:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:51:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:51:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:52:22 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:52:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:53:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:53:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:54:22 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:54:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:55:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:55:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:56:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:56:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:57:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:57:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:58:54 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:54f07a98-8899-4f98-9f29-1822b0d6e314 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection)
+   at Mancave.MancaveServices.StatusSvc.GetAllAccountStatuses(ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 20
+
+*************************************************************************************************
+2014.12.02 16:58:55 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:58:55 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:59:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 16:59:27 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:6ccc9435-509c-4499-8061-6fe0ae9382e6 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 177
+
+*************************************************************************************************
+2014.12.02 17:00:10 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:00:11 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:4d4275fa-467b-4c1b-867f-2187b91674b9 --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String email, String herEmail, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 279
+
+*************************************************************************************************
+2014.12.02 17:00:14 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:00:43 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:01:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:01:43 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:02:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:02:43 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:03:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:03:43 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:04:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:04:43 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:05:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:05:44 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:06:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:06:44 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:07:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:08:42 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:881314be-f222-4792-9eb9-ce355f63868d --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection)
+   at Mancave.MancaveServices.StatusSvc.GetAllAccountStatuses(ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 20
+
+*************************************************************************************************
+2014.12.02 17:08:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:08:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:08:53 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:09:16 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:11:31 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:88a36db5-554d-4202-8aaf-a5522fa096bb --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection)
+   at Mancave.MancaveServices.StatusSvc.GetAllAccountStatuses(ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\StatusSvc.cs:line 20
+
+*************************************************************************************************
+2014.12.02 17:13:46 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:14:16 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:14:47 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:15:17 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:15:40 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:58099094-3676-459b-bace-2aa4fcd3be0f --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mancave.MancaveServices.AccountSvc.GetAccountByEmail(String email, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 177
+
+*************************************************************************************************
+2014.12.02 17:15:43 ||| Not Available ||| Not Available ||| MESSAGE:The underlying provider failed on Open. --- INNER-EXCEPTION:System.Data.SqlClient.SqlException (0x80131904): Cannot open database "mancave" requested by the login. The login failed.
+Login failed for user 'mancaveuser'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+ClientConnectionId:58099094-3676-459b-bace-2aa4fcd3be0f --- SOURCE:System.Data.Entity --- STACK-TRACE:   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Mancave.MancaveServices.AccountSvc.AddAccount(String email, String herEmail, ServiceCallResult& scr) in e:\_Web Development\Equity Apps\Mancave\MancaveServices\AccountSvc.cs:line 279
+
+*************************************************************************************************
+2014.12.02 17:15:48 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:16:16 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:16:49 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:17:16 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:17:47 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:18:16 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:18:27 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:18:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:18:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:19:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:19:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:20:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:20:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:21:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:21:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:22:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:22:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:23:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:23:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:24:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:24:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:25:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:25:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:26:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:26:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:27:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:27:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:28:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:28:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:29:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:29:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:30:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:30:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:31:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:31:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:32:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:32:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:33:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:33:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:34:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:34:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:35:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:35:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:36:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:36:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:37:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:37:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:38:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:38:55 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:39:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:39:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:40:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:40:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:41:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:41:54 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:42:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:42:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:43:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:43:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:44:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:44:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:45:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:45:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:46:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:46:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:47:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:47:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:48:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:48:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:49:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:49:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:50:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:50:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:51:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:51:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:52:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:52:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:53:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:53:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:54:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:54:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:55:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:55:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:56:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:56:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:57:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:57:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:58:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:58:52 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:59:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 17:59:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:00:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:00:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:01:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:01:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:02:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:02:50 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:03:20 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:03:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:04:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:04:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:05:21 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:05:51 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:05:56 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:06:03 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:06:22 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:06:35 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:06:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:07:01 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:07:26 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:07:33 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:07:56 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:08:02 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:08:26 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:08:32 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:08:58 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:18:53 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:19:09 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:19:13 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:19:47 ||| Not Available ||| Not Available ||| 
+
+*************************************************************************************************
+2014.12.02 18:20:06 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:20:10 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:20:41 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:21:09 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:21:41 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:22:09 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:22:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:23:09 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:23:44 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:24:11 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:24:41 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:25:15 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:25:43 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:26:16 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:26:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:27:11 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:27:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:28:11 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:28:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:29:12 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:29:42 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:30:13 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:30:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:31:12 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:31:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:32:14 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:32:40 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:33:11 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:33:43 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:34:11 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:34:43 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:35:11 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:35:41 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:36:10 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:36:41 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:37:12 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:37:42 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:38:12 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:38:42 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:39:12 |||  ||| gilbert.sauceda@gmail.com ||| 
+
+*************************************************************************************************
+2014.12.02 18:39:42 |||  ||| gilbert.sauceda@gmail.com ||| 

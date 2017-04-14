@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b0e14b4460f04abbb46fe07387d69816" Name="Diagram1">
+        <EntityTypeShape EntityType="MancaveModel.Account" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountCalendarEvent" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountFavSite" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountFriend" Width="1.5" PointX="5.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountPhoto" Width="1.5" PointX="5.25" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountPost" Width="1.5" PointX="8.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountSkill" Width="1.5" PointX="5.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.AccountVideo" Width="1.5" PointX="8.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Action" Width="1.5" PointX="6" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Album" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.CommMethod" Width="1.5" PointX="6" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Communication" Width="1.5" PointX="8.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Country" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Forum" Width="1.5" PointX="5.25" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.ForumMessage" Width="1.5" PointX="10.75" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Game" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Privacy" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.State" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Status" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MancaveModel.Topic" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="true" />
+        <AssociationConnector Association="MancaveModel.fk_Account_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Account_State" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Account_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountCalendarEvent_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountFavSite_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountFriend_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountFriend_Friend" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountPhoto_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountPost_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountPost_PostedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountSkill_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountVideo_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Communication_Account_From" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Communication_Account_To" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Forum_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_ForumMessage_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Topic_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountPhoto_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountPost_ParentPost" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountPost_Privacy" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_AccountVideo_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Communication_Action" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Communication_CommMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Communication_StatusTo" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_Topic_Forum" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_ForumMessage_Parent" ManuallyRouted="false" />
+        <AssociationConnector Association="MancaveModel.fk_ForumMessage_Topic" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

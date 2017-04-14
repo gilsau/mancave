@@ -1,0 +1,41 @@
+﻿@using Mancave.MancaveServices
+@model IEnumerable<Communication>
+
+@{
+    IEnumerable<Communication> notes = (IEnumerable<Communication>)Model;
+    Account acct = (Account)Session["User"];
+    
+    if(acct != null)
+    {
+        <li class="text-center"><a href="~/messages/notifications">All Friend Requests</a></li>
+    
+        //Notifications
+        foreach (Communication comm in notes)
+        {
+            string url = "#";
+            if(comm.ActionId == (int)ActionType.Invitation){
+                url = Url.Content("~/messages/notifications");
+            }
+                        
+            string msgPrev = comm.MessageTo;
+                    
+            <li class="divider" style="margin:0px;"></li>
+            <li style="text-align:left;width:100%;">
+                <a href="@url" style="margin:0px;padding:5px;">
+                    <div class="row">
+                        <div class="col-xs-2"><img class="circularProfilePic2" src="~/profilepics/@comm.Account.ProfilePic" style="width:25px;height:25px;margin:2px 0px 2px 5px;" /></div>
+                        <div class="col-xs-10">
+                            <small><b>@string.Format("{0}", comm.Account.DisplayName)</b></small>
+                            <div class="text-info"><small style="font-size:x-small;white-space:normal;">@msgPrev</small></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        }
+
+        if(notes.Count() > 0){
+            <li class="divider" style="margin:0px;"></li>
+            <li class="text-center"><a href="~/messages/notifications">All Friend Requests</a></li>
+        }
+    }
+}

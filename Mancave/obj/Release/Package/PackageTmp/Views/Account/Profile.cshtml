@@ -1,0 +1,433 @@
+﻿@using Mancave.MancaveServices;
+@using System.Linq;
+@using System.Linq.Expressions;
+@{
+    ViewBag.Title = "Profile";
+
+    bool bRestricted = Session["Restricted"] != null ? true : false;
+    bool bEdit = TempData["edit"] != null ? true : false;
+    bool bVerify = (TempData["verify"] != null) ? true : false;
+    int acctId = Request.QueryString["id"] != null ? int.Parse(Request.QueryString["id"].ToString()) : ((Account)Session["User"]).Id;
+
+    ServiceCallResult scr;
+    AccountSvc acctSvc = new AccountSvc();
+    Account acctProfile = acctSvc.GetAccountById(acctId, out scr);
+    Account acctCurrent = acctSvc.GetAccountById(((Account)Session["User"]).Id, out scr);
+
+    string dispName = !string.IsNullOrEmpty(acctProfile.DisplayName) ? acctProfile.DisplayName  : string.Empty;
+    string firstName = !string.IsNullOrEmpty(acctProfile.FirstName) ? acctProfile.FirstName : string.Empty;
+    string lastName = !string.IsNullOrEmpty(acctProfile.LastName) ? acctProfile.LastName : string.Empty;
+    string city = !string.IsNullOrEmpty(acctProfile.City) ? acctProfile.City : string.Empty;
+    string state = acctProfile.StateId > 0 ? acctProfile.State.Name : string.Empty;
+    string country = acctProfile.CountryId > 0 ? acctProfile.Country.Name : string.Empty;
+    string zipcode = !string.IsNullOrEmpty(acctProfile.Zipcode) ? acctProfile.Zipcode : string.Empty;
+    
+    bool bWifeExists = !string.IsNullOrEmpty(acctCurrent.HerEmail) ? true : false;
+    string firstCol = bWifeExists ? "6" : "11";
+    string secondCol = bWifeExists ? "6" : "1";
+
+    bool bPublicViewer = acctProfile.AccountFriends.SingleOrDefault(af => af.FriendId == acctCurrent.Id) != null ? false : true;
+}
+
+@section Styles{
+    <link href="~/css/slider.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        #ex1Slider .slider-selection {
+	        background: #BABABA;
+        }
+    </style>
+}
+
+@section Scripts{
+    <script src="~/scripts/bootstrap-slider.js"></script>
+    <script src="~/scripts/profile.js"></script>
+    <script src="~/scripts/mancave.js"></script>
+}
+
+<div class="container-fluid panel" style="padding:10px;">
+    <form id="frmEditWebsite" method="post">
+        <div id="editwebsitePanel" class="collapse panel panel-default pull-right" style="border:solid 1px #eee;padding:10px;width:100%;">
+        <div class="panel-body">
+            
+            <button type="button" class="btn btn-sm btn-default closeEditWebsite pull-right"><span class="glyphicon glyphicon-remove"></span></button>
+
+            <div class="sectionTitle2">SITE HEADER, PAGE TITLES, POP-UP WINDOW TITLES</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div><label for="HeaderBackColor1">Background Color 1</label></div>
+                    @Html.Partial("ColorList", new string[2]{"HeaderBackColor1", acctCurrent.HeaderBackColor1})
+                </div>
+                <div class="col-md-4">
+                    <div><label for="HeaderBackColor2">Background Color 2</label></div>
+                    @Html.Partial("ColorList", new string[2]{"HeaderBackColor2", acctCurrent.HeaderBackColor2})
+                </div>
+                <div class="col-md-4">
+                    <div><label for="HeaderFontColor">Link Color</label></div>
+                    @Html.Partial("ColorList", new string[2]{"HeaderFontColor", acctCurrent.HeaderFontColor})
+                </div>
+            </div>
+            <hr />
+            <div class="sectionTitle2">MAIN PANEL</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div><label for="MainPanelBackImgTransparency">Transparency for Background Image</label></div>
+                    <input id="MainPanelBackImgTransparency" name="MainPanelBackImgTransparency" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="@acctCurrent.MainPanelBackImgTransparency"/>
+                </div>
+                <div class="col-md-4">
+                    <div><label for="MainPanelPanelsTransparency">Transparency for Panels</label></div>
+                    <input id="MainPanelPanelsTransparency" name="MainPanelPanelsTransparency" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="@acctCurrent.MainPanelPanelsTransparency"/>
+                </div>
+                <div class="col-md-4">
+                    <div><label for="MainPanelFontColor">Font Color for Panels</label></div>
+                    @Html.Partial("ColorList", new string[2]{"MainPanelFontColor", acctCurrent.MainPanelFontColor})
+                </div>
+            </div>
+            <hr />
+            <div class="sectionTitle2">LEFT PANEL</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div><label for="LeftPanelBackColor1">Background Color 1</label></div>
+                    @Html.Partial("ColorList", new string[2]{"LeftPanelBackColor1", acctCurrent.LeftPanelBackColor1})
+                </div>
+                <div class="col-md-4">
+                    <div><label for="leftPanelBackColor2">Background Color 2</label></div>
+                    @Html.Partial("ColorList", new string[2]{"LeftPanelBackColor2", acctCurrent.LeftPanelBackColor2})
+                </div>
+                <div class="col-md-4">
+                    <div><label for="LeftPanelFontColor">Font Color</label></div>
+                    @Html.Partial("ColorList", new string[2]{"LeftPanelFontColor", acctCurrent.LeftPanelFontColor})
+                </div>
+            </div>
+            <hr />
+            <div class="sectionTitle2">RIGHT PANEL</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div><label for="RightPanelBackColor1">Background Color 1</label></div>
+                    @Html.Partial("ColorList", new string[2]{"RightPanelBackColor1", acctCurrent.RightPanelBackColor1})
+                </div>
+                <div class="col-md-4">
+                    <div><label for="RightPanelBackColor2">Background Color 2</label></div>
+                    @Html.Partial("ColorList", new string[2]{"RightPanelBackColor2", acctCurrent.RightPanelBackColor2})
+                </div>
+                <div class="col-md-4">
+                    <div><label for="RightPanelFontColor">Font Color</label></div>
+                    @Html.Partial("ColorList", new string[2]{"RightPanelFontColor", acctCurrent.RightPanelFontColor})
+                </div>
+            </div>
+        </div>
+    </div>
+        <input type="hidden" id="BackgroundImage" value="@acctProfile.BackgroundImage" />
+    </form>
+
+    @if(bVerify){
+        
+        if (bRestricted)
+        {
+            <h2>Welcome to your husband's Mancave!</h2>
+        }
+        else{
+            <h2>Welcome to Your Mancave!</h2>
+        }
+        
+        <div class="alert alert-info">Your account has been verified!</div>
+        <p></p>
+        
+        if (!bRestricted)
+        {
+            <h3>Let’s begin your Mancave profile!</h3>
+        }
+        
+    }
+
+    @if(!bEdit){ 
+        
+        <div class="row">
+            <div class="col-md-3">
+                <img src="~/profilepics/@acctProfile.ProfilePic" style="width:80%;margin-left:10px;" />
+            </div>
+            <div class="col-md-9">
+                
+                @if(acctProfile.Id == acctCurrent.Id){
+                    <div class="pull-right">
+                        <div id="editImg" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <ul class="dropdown-menu pull-right" style="top:0px;">
+                                @if(!bRestricted){
+                                    <li><a href="~/account/profile?edit=1">Edit Profile Information</a></li>
+                                    <li><a href="#changeprofilepicForm" data-toggle="modal">Update Profile Picture</a></li>
+                                    <li><a href="#changebackimgForm" data-toggle="modal">Update Background Image</a></li>
+                                    <li><a data-toggle="collapse" data-target="#editwebsitePanel">Edit Website Colors</a></li>
+                                    <li><a href="#editmancavetilesForm" data-toggle="modal">Edit Mancave Tiles</a></li>
+                                }
+                                else{
+                                    <li><a href="~/account/profile?edit=1" data-toggle="modal">Update Wife's Login</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                }
+
+                <div style="font-size:28px;">@dispName <span style="font-size:18px;">(@firstName @lastName)</span></div>
+                <div style="font-size:18px;">@city @state @country</div>
+                <div style="margin-top:20px;">
+                    @if(acctCurrent.AccountFriends.SingleOrDefault(af => af.Account1.Id == acctId) == null)
+                    {
+                        string buttonText = "Add Friend";
+                        int acctProfileInvites = acctProfile.Communications1.Where(c => c.ActionId == (int)ActionType.Invitation && c.StatusToId == (int)StatusType.New).Count();
+                        if (acctProfileInvites > 0 && acctProfile.Id != acctCurrent.Id)
+                        {
+                            buttonText = "Friend Request Sent";
+                        }
+                        
+                        <button id="btnAddFriend" data-id="@acctProfile.Id" @{ if(bRestricted || acctProfile.Id == acctCurrent.Id || acctProfileInvites > 0){ <text>disabled="disabled"</text> } } class="btn btn-md btn-primary">@buttonText</button>
+                    }
+                    else{
+                        <button disabled="disabled" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-check"></span>&nbsp;Friends</button>
+                    }
+                    <a href="#messageForm" data-name="@dispName" data-id="@acctProfile.Id" data-toggle="modal" @{ if (bRestricted || acctProfile.Id == acctCurrent.Id){ <text>disabled="disabled"</text> } } class="btn btn-md btn-primary">Message</a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <p>&nbsp;</p>
+        <div style="padding:10px;">
+            <!-- Tabs navigation -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Mancave</a></li>
+                <li><a href="#tab2" data-toggle="tab">Forums</a></li>
+                <li><a href="#tab3" data-toggle="tab">Photos</a></li>
+                <li><a href="#tab4" data-toggle="tab">Videos</a></li>
+                <li><a href="#tab5" data-toggle="tab">Radio</a></li>
+                <li><a href="#tab6" data-toggle="tab">Resume</a></li>
+                <li><a href="#tab7" data-toggle="tab">Friends</a></li>
+                <li><a href="#tab8" data-toggle="tab">Fav Links</a></li>
+            </ul>
+
+            <!-- Tab Sections -->
+            <div class="tab-content">
+                <div class="tab-pane active mcaveContainer" id="tab1">@Html.Partial("Mancave", acctProfile)</div>
+                <div class="tab-pane" id="tab2">@Html.Partial("ProfileForums", acctProfile)</div>
+                <div class="tab-pane" id="tab3">@Html.Partial("ProfilePhotos", acctProfile)</div>
+                <div class="tab-pane" id="tab4">@Html.Partial("ProfileVideos", acctProfile)</div>
+                <div class="tab-pane" id="tab5">@Html.Partial("ProfileRadio", acctProfile)</div>
+                <div class="tab-pane" id="tab6">@Html.Partial("ProfileResume", acctProfile)</div>
+                <div class="tab-pane" id="tab7">@Html.Partial("ProfileFriends", acctProfile)</div>
+                <div class="tab-pane" id="tab8">@Html.Partial("ProfileFavLinks", acctProfile)</div>
+            </div>
+        </div>
+    }
+        
+    @if (bEdit && acctProfile.Id == acctCurrent.Id)
+    {
+        
+        <div class="sectionTitle">Update Profile</div>
+    
+        <form id="frmProfile" action="~/account/profile" method="post" enctype="multipart/form-data" style="padding:0px;margin:0px;">
+            <div class="row" style="padding:0px;margin:0px;">
+                <div class="col-md-@firstCol">
+                    <h4 style="padding:10px 0px 0px 10px;">
+                        @if(bWifeExists){
+                            <text>Husband's Info</text>
+                        }
+                        else{
+                            <text>Your Personal Info</text>
+                        }
+                    </h4>
+                    <hr style="padding:0px;margin:0px;" />
+                    <div class="input-group">
+                        <span class="input-group-addon">Display Name</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> } type="text" class="form-control" name="DisplayName" placeholder="first name" value="@acctProfile.DisplayName" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Firstname</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> } type="text" class="form-control" name="FirstName" placeholder="first name" value="@acctProfile.FirstName" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Lastname</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="LastName" placeholder="last name" value="@acctProfile.LastName" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">City</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="City" placeholder="city" value="@acctProfile.City" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Zipcode</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="Zipcode" placeholder="zipcode" value="@acctProfile.Zipcode" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">State</span>
+                        <select @if(bRestricted){ <text>disabled="disabled"</text> }  class="form-control" name="StateId">
+                            <option value="0">select state</option>
+                            @foreach (State state2 in (List<State>)ViewBag.States)
+                            {
+                                <option value="@state2.Id" @if (state2.Id == acctProfile.StateId) { <text>selected</text>}>@state2.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Country</span>
+                        <select @if(bRestricted){ <text>disabled="disabled"</text> }  class="form-control" name="CountryId">
+                            <option value="0">select country</option>
+                            @foreach (Country country2 in (List<Country>)ViewBag.Countries)
+                            {
+                                <option value="@country2.Id" @if (country2.Id == acctProfile.CountryId) { <text>selected</text>}>@country2.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Email</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="Email" placeholder="email address" value="@acctProfile.Email" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Password</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="password" class="form-control" name="Password" placeholder="password (min. of 7 characters)" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" style="font-size:10pt;">Confirm Password</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="password" class="form-control" name="Password2" placeholder="re-type password" />
+                    </div>
+                </div>
+                <div class="col-md-@secondCol">
+                    @if(bWifeExists){
+                    <h4 style="padding:10px 0px 0px 10px;">Wife's Info</h4>
+                    <hr style="padding:0px;margin:0px;" />
+                    <div class="input-group">
+                        <span class="input-group-addon">Wife's Page Title</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="WifesPageTitle" placeholder="title" value="@acctProfile.WifesPageTitle" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Wife's Page</span>
+                        <input @if(bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="WifesPageUrl" placeholder="example: http://www.facebook.com/wifesname" value="@acctProfile.WifesPageUrl" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Wife's Email</span>
+                        <input @if(!bRestricted){ <text>disabled="disabled"</text> }  type="text" class="form-control" name="HerEmail" placeholder="email address" value="@acctProfile.HerEmail" />
+                    </div>
+                    
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">Wife's Password</span>
+                        <input @if(!bRestricted){ <text>disabled="disabled"</text> }  type="password" class="form-control" name="HerPassword" placeholder="password (min. of 7 characters)" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" style="font-size:10pt;">Confirm Wife's Password</span>
+                        <input @if(!bRestricted){ <text>disabled="disabled"</text> }  type="password" class="form-control" name="HerPassword2" placeholder="re-type password" />
+                    </div>
+                    }
+                </div>
+            </div>
+            <button class="btn btn-primary btn-sm pull-right" type="submit">Save Information</button>
+
+            <input name="Id" type="hidden" value="@acctProfile.Id" />
+        </form>
+    }
+
+</div>
+
+<!-- Change Profile Pic modal -->
+<form method="post" action="~/account/updateprofilepic" enctype="multipart/form-data">
+    <div id="changeprofilepicForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Update Profile Picture
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="back-img" class="col-lg-2 control-label">Profile Picture</label>
+                            <div class="col-lg-10">
+                                <input type="file" name="ProfilePic" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="profilpicbtn btn btn-primary pull-right">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Change Background Image modal -->
+<form method="post" action="~/account/updatebackimg" enctype="multipart/form-data">
+    <div id="changebackimgForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Update Background Image
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="back-img" class="col-lg-2 control-label">Background Image</label>
+                            <div class="col-lg-10">
+                                <input type="file" name="BackImgFile" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="backimgbtn btn btn-primary pull-right">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Edit Mancave Tiles modal -->
+<form method="post" action="~/mancave/updatetiles">
+    <div id="editmancavetilesForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Update Mancave Tiles
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div><label>Mancave Tile 1</label></div>
+                                    @Html.Partial("TileList", new string[]{ "MancaveTile1", acctCurrent.MancaveTile1Url.ToLower() })
+                                </div>
+                                <div class="col-md-4">
+                                    <div><label>Mancave Tile 2</label></div>
+                                    @Html.Partial("TileList", new string[]{ "MancaveTile2", acctCurrent.MancaveTile2Url.ToLower() })
+                                </div>
+                                <div class="col-md-4">
+                                    <div><label>Mancave Tile 3</label></div>
+                                    @Html.Partial("TileList", new string[]{ "MancaveTile3", acctCurrent.MancaveTile3Url.ToLower() })
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div><label>Mancave Tile 4</label></div>
+                                    @Html.Partial("TileList", new string[]{ "MancaveTile4", acctCurrent.MancaveTile4Url.ToLower() })
+                                </div>
+                                <div class="col-md-4">
+                                    <div><label>Mancave Tile 5</label></div>
+                                    @Html.Partial("TileList", new string[]{ "MancaveTile5", acctCurrent.MancaveTile5Url.ToLower() })
+                                </div>
+                                <div class="col-md-4">
+                                    <div><label>Mancave Tile 6</label></div>
+                                    @Html.Partial("TileList", new string[]{ "MancaveTile6", acctCurrent.MancaveTile6Url.ToLower() })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="backimgbtn btn btn-primary pull-right">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

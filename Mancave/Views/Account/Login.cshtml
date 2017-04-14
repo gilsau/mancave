@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/views/shared/_layoutlogin.cshtml";
+
+    string err = (TempData["Error"] != null) ? TempData["Error"].ToString() : string.Empty;
+    string msg = (TempData["Msg"] != null) ? TempData["Msg"].ToString() : string.Empty;
+}
+
+@section Scripts{
+    <script src="~/scripts/login.js"></script>
+}
+
+@if(!string.IsNullOrEmpty(err)){ 
+    <div class="alert alert-danger alert-dismissable">
+       <button type="button" class="close" data-dismiss="alert" 
+          aria-hidden="true">
+          &times;
+       </button>
+       <div>@err</div>
+    </div>
+}
+
+<div id="divWarn" class="alert alert-warning alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" 
+        aria-hidden="true">
+        &times;
+    </button>
+    <div>@msg</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>&nbsp;</p>
+            <img src="~/images/mancavetiles.jpg" style="width:100%;" />
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-4">
+            <h1>Join Now! It's FREE!</h1>
+            <div class="jumbotron" style="height:180px;padding:25px;">
+                <h4 style="color:#fff;">Build Your Own Virtual Mancave</h4>
+                <input class="form-control" type="text" id="SingleEmail" placeholder="email address" />
+                <button id="btnJoinSingle" class="btn btn-md btn-default pull-right">JOIN</button>
+            </div>
+            <p>&nbsp;</p>
+            <div class="jumbotron" style="height:220px;padding:25px;">
+                <h4 style="color:#fff;">Help Build Your Husband's<br />Virtual Mancave</h4>
+                <input class="form-control" type="text" id="MarriedHerEmail" placeholder="wife's email" />
+                <input class="form-control" type="text" id="MarriedEmail" placeholder="husband's email" />
+                <button id="btnJoinMarried" class="btn btn-md btn-default pull-right">JOIN</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="frmSignup" action="~/account/signup" method="post">
+    <input type="hidden" id="HerEmail" name="HerEmail" />
+    <input type="hidden" id="Email" name="Email" />
+</form>

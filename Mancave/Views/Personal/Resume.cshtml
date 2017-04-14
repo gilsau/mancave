@@ -1,0 +1,6 @@
+﻿@{ ViewBag.Title = "My Resume"; }
+@section Scripts{
+    <script src="~/scripts/resume.js" type="text/javascript"></script>
+}
+
+@Html.Partial("ProfileResume", Session["User"])

@@ -1,0 +1,152 @@
+﻿@using Mancave.MancaveServices
+@{
+    ViewBag.Title = "Mgames";
+    
+    ServiceCallResult scr;
+    GameSvc gameSvc = new GameSvc();
+
+    Game game;
+    List<Game> games;
+    
+    string actionActive = "";
+    string puzzleActive = "";
+    string shooterActive = "";
+    string rotaryActive = "";
+
+    if (Request.QueryString["catid"] != null) { if (Request.QueryString["catid"] == "1") { actionActive = "active"; } }
+    if (Request.QueryString["catid"] != null) { if (Request.QueryString["catid"] == "2") { puzzleActive = "active"; } }
+    if (Request.QueryString["catid"] != null) { if (Request.QueryString["catid"] == "3") { shooterActive = "active"; } }
+    if (Request.QueryString["catid"] != null) { if (Request.QueryString["catid"] == "4") { rotaryActive = "active"; } }
+    
+    if(actionActive == "" && puzzleActive == "" && shooterActive == "" && rotaryActive == ""){
+        actionActive = "active";
+    }
+
+    int id = Request.QueryString["id"] != null ? int.Parse(Request.QueryString["id"].ToString()) : 0;
+    int catId = Request.QueryString["catid"] != null ? int.Parse(Request.QueryString["catid"].ToString()) : 0;
+}
+
+<div class="sectionTitle">@ViewBag.Title</div>
+
+
+<div class="panel panel-default trans">
+    <div class="panel-body">
+        
+        <!-- Tabs navigation -->
+        <ul class="nav nav-tabs">
+            <li class="@actionActive"><a href="#tab1" data-toggle="tab">Action Games</a></li>
+            <li class="@puzzleActive"><a href="#tab2" data-toggle="tab">Puzzle Games</a></li>
+            <li class="@shooterActive"><a href="#tab3" data-toggle="tab">Shooter Games</a></li>
+        </ul>
+
+        <!-- Tab Sections -->
+        <div class="tab-content">
+            <div class="tab-pane @actionActive" id="tab1" style="padding:20px;background:transparent;">
+
+            @{  if(id > 0 && catId == 1){
+
+                        game = gameSvc.GetGameById(id, out scr);
+                               
+                        <h4><a href="?catid=1"><span class="glyphicon glyphicon-backward"></span>&nbsp;BACK TO ACTION GAMES LIST</a></h4>
+                               
+                        <h2>@game.Name</h2>
+                        <div style="font-size:16px;">
+                            <span style="font-size:20px;font-weight:bold;">INSTRUCTIONS:</span><br />
+                            @game.Instructions
+                        </div>
+                        <hr />
+                        <div>@Html.Raw(HttpUtility.HtmlDecode(game.EmbedCode))</div>
+                    }
+                    else{
+                       
+                        games = gameSvc.GetGamesByCategory(1, out scr);
+                    
+                        foreach(Game g in games)
+                        {
+                            <div style="display:inline-block;">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" style="padding:10px;">
+                                        <h4>@g.Name.ToUpper()</h4>
+                                        <a href="?catid=1&id=@g.Id"><img src="~/gameimages/@g.Logo" style="height:150px;" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+
+            </div>
+            <div class="tab-pane @puzzleActive" id="tab2" style="padding:20px;background:transparent;">
+                
+                @{  if(id > 0 && catId == 2){
+                    
+                        game = gameSvc.GetGameById(id, out scr);
+                               
+                        <h4><a href="?catid=2"><span class="glyphicon glyphicon-backward"></span>&nbsp;BACK TO PUZZLE GAMES LIST</a></h4>
+                               
+                        <h2>@game.Name</h2>
+                        <div style="font-size:16px;">
+                            <span style="font-size:20px;font-weight:bold;">INSTRUCTIONS:</span><br />
+                            @game.Instructions
+                        </div>
+                        <hr />
+                        <div>@Html.Raw(HttpUtility.HtmlDecode(game.EmbedCode))</div>
+                   }
+                   else{
+                       
+                        games = gameSvc.GetGamesByCategory(2, out scr);
+                    
+                        foreach(Game g in games)
+                        {
+                            <div style="display:inline-block;">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" style="padding:10px;">
+                                        <h4>@g.Name.ToUpper()</h4>
+                                        <a href="?catid=2&id=@g.Id"><img src="~/gameimages/@g.Logo" style="height:150px;" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+
+            </div>
+            <div class="tab-pane @shooterActive" id="tab3" style="padding:20px;background:transparent;">    
+                
+                @{  if(id > 0 && catId == 3){
+                    
+                        game = gameSvc.GetGameById(id, out scr);
+                               
+                        <h4><a href="?catid=3"><span class="glyphicon glyphicon-backward"></span>&nbsp;BACK TO SHOOTER GAMES LIST</a></h4>
+                               
+                        <h2>@game.Name</h2>
+                        <div style="font-size:16px;">
+                            <span style="font-size:20px;font-weight:bold;">INSTRUCTIONS:</span><br />
+                            @game.Instructions
+                        </div>
+                        <hr />
+                        <div>@Html.Raw(HttpUtility.HtmlDecode(game.EmbedCode))</div>
+                   }
+                   else{
+                       
+                        games = gameSvc.GetGamesByCategory(3, out scr);
+                    
+                        foreach(Game g in games)
+                        {
+                            <div style="display:inline-block;">
+                                <div class="panel panel-default">
+                                    <div class="panel-body" style="padding:10px;">
+                                        <h4>@g.Name.ToUpper()</h4>
+                                        <a href="?catid=3&id=@g.Id"><img src="~/gameimages/@g.Logo" style="height:150px;" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+
+            </div>
+        </div>
+
+    </div>
+</div>

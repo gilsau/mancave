@@ -1,0 +1,399 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.news-item, .empty-news-item {
+	font-size: 14px;
+	font-weight: normal;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0;
+	border-top: 0 !important;
+	border-left: 0 !important;
+	border-right: 0 !important;
+	background: none !important;
+}
+
+.buttons {
+	width: 36px;
+	display: none; /* hide previous/next buttons by default */
+}
+
+
+.buttons, .buttons .ui-icon {
+	float: right;
+}
+
+.ui-icon {
+	cursor: pointer;
+}
+
+.scrollbar {
+	overflow-y: auto !important;
+}
+
+.scrollbar .news-item, .scrollbar .empty-news-item {
+	padding-right: 13px !important; /* more padding for scrollbar, otherwise text is hidden*/
+}
+
+.news-item-left, .news-item-right {
+	float: left;
+	clear: none;
+}
+
+.news-item-left {
+	width: 50px !important;
+}
+
+.news-item-left .news-item-link {
+	display: block;
+	width: 48px;
+	height: 48px;
+}
+
+.no-image {
+	background: url(../images/feedzilla-icon-48.png) transparent no-repeat;
+}
+
+.news-item-image {
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	float: left;
+}
+
+.news-item-image img {
+	display: none; /* image is shown only if it has been loaded */
+}
+
+.news-item-caption {
+	font-size: 10px;
+	float: left;
+}
+
+.news-item-link {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.news-item-link:hover {
+	text-decoration: underline;
+}
+
+.news-item-share {
+	width: 40px;
+	white-space: nowrap;
+	display: none;
+}
+
+.news-item-share, .news-item-share a {
+	float: right;
+	clear: none;
+}
+
+.news-item-share a {
+	padding-left: 4px;
+}
+
+.more-items {
+	text-align: center;
+}
+
+.secret {
+	display: none;
+}
+
+#header {
+	font-size: 14px;
+	height: 50px;
+	overflow: hidden;
+}
+
+#header .buttons {
+	position: absolute;
+	top: 26px; /* left position determined in ShowButtons in news.js */
+}
+
+#header .logo {
+	display: none;
+	float: left;
+	clear: none;
+	padding-left: 10px;
+	padding-top: 7px;
+	height: 40px;
+
+}
+
+#title-caption {
+	padding-left: 10px;
+	padding-top: 7px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#title {
+	font-size: 16px;
+}
+
+#caption {
+	font-size: 12px;
+	overflow: hidden;
+}
+
+#tabs-nav-wrapper {
+	display: none; /* hide the tabs initially */
+	overflow: hidden;
+	white-space: nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+}
+
+#tabs-nav-wrapper .ui-icon {
+	display: none;
+}
+
+#tabs-nav-wrapper .prev-tab-btn,
+#tabs-nav-wrapper .next-tab-btn {
+	float: left;
+	clear: none;
+}
+
+#tabs-nav-wrapper .prev-tab-btn {
+	position: relative;
+	left: -3px;
+}
+
+#tabs-nav-wrapper .next-tab-btn {
+	position: relative;
+	left: 1px;
+}
+
+#tabs-nav {
+	float: left;
+	position: relative;
+}
+
+#tabs-nav ul {
+	position: relative; /* used to slide the tabs to the side */
+	left: 0;
+	white-space: pre;  /* ie7 fix for messy first tab */
+	height: 16px;
+}
+
+#tabs-nav li {
+	display: inline;
+	padding-right: 10px;
+	font-size: 14px;
+}
+
+#tabs-nav a {
+	outline: none;
+}
+
+#tabs-nav .active a {
+	text-decoration: none;
+	cursor: default;
+}
+
+#wrapper {
+	visibility: hidden; /* used to initially hide the widget until all style loads */
+}
+
+#wrapper, .news {
+	overflow: hidden;
+}
+
+.news-item-wrapper {
+	height: 100%;
+}
+
+.loading {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.global.loading {
+	display: block;
+}
+
+.ticker-global.loading, .ticker .loading {
+	top: 6px;
+}
+
+.error {
+	display: none;
+	text-align: center;
+}
+
+.error .reload {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#footer {
+	height: 30px;
+	visibility: hidden;
+	position: relative;
+	z-index: 10;
+}
+
+#footer .feedzilla-logo {
+	position: relative;
+	float: left;
+	top: 4px;
+	left: 10px;
+	border: 0;
+}
+
+#footer .feedzilla-logo .img {
+	width: 106px;
+	height: 23px;
+	background: url(../images/feedzilla-small.png) no-repeat transparent;
+	cursor: pointer;
+	position: absolute;
+}
+
+#footer .addthis {
+	float: right;
+	position: relative;
+	width: 60px;
+	top: 7px;
+	left: -12px;
+}
+
+#footer .rss, #footer .facebook-app {
+	float: right;
+	position: relative;
+	top: 7px;
+	left: -10px;
+	cursor: pointer;
+}
+
+#footer .facebook-app {
+	left: -14px;
+}
+
+/* ticker style */
+.ticker, .ui-widget {
+	font-family:Arial,sans-serif !important; /* overide theme font for the ticker, otherwise the caption may appear out of screen */
+}
+
+.ticker #header {
+	padding-right: 10px;
+}
+
+.ticker #header, .ticker .news {
+	float: left;
+	clear: none;	
+}
+
+.ticker #header #title, .ticker .news-item {
+	font-size: 12px;
+}
+
+.ticker #header .feedzilla-logo {
+	display: none; /* shown once the widget loads */
+	float: right;
+	position: relative;
+	top: 4px;
+}
+
+.ticker #header #title {
+	float: left;
+	padding: 6px 0 0 8px;
+	max-width: 140px;
+}
+
+.ticker #caption, .ticker .rss {
+	display: none;
+}
+
+.ticker .news-item-wrapper {
+	float: left;
+}
+
+.ticker .news-item-left {
+	display: none;
+}
+
+.ticker .news-item-text, #header #title {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+ }
+ 
+.ticker .news-item {
+	border: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.ticker .news-item-title, .ticker.news-item-caption {
+	float: left;
+	clear: both;
+}
+
+.ticker .news-item-text {
+	float: left;
+	clear: none;
+}
+
+.ticker .news-item-caption {
+	font-size: 9px;
+}
+
+.ticker .news-item-share, .secret .news-item-share {
+	/* width: 40px;  commented out due to addthis ticket */
+	width: 0;
+	display: none;
+}
+
+.ticker .buttons, .ticker .news-item-share {
+	position: relative;
+	top: 6px;
+}
+
+.ticker .buttons {
+	left: -6px;
+}
+
+.ticker .error {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.icon {
+    background: url("../images/sharing-icons.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 16px;
+    line-height: 16px !important;
+    overflow: hidden;
+    width: 16px;
+	cursor: pointer;
+}
+
+
+.rss .icon {
+	background-position: -48px 0;
+}
+
+.facebook-app .icon {
+	background-position: 0px 0;
+}

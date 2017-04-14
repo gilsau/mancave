@@ -1,0 +1,40 @@
+﻿@using Mancave.MancaveServices
+@model IEnumerable<Conversation>
+
+@{
+    IEnumerable<Conversation> convos = (IEnumerable<Conversation>)Model;    
+    Account acct = (Account)Session["User"];
+    
+    if(acct != null)
+    {
+        <li class="text-center"><a href="~/messages/">View All Messages</a></li>
+    
+        //Messages
+        foreach (Conversation convo in convos)
+        {
+            ServiceCallResult scrMsgs;
+            Communication comm = CommSvc.GetMostRecentMessageByConversationId(convo.Id, out scrMsgs);
+            Account profileAcct = comm.FromAcctId == acct.Id ? comm.Account1 : comm.Account;
+
+            string msgPrev = comm.MessageTo.Length > 30 ? comm.MessageTo.Substring(0, 30) : comm.MessageTo;
+                    
+            <li class="divider" style="margin:0px;"></li>
+            <li style="text-align:left;width:100%;">
+                <a href="~/messages/?convoId=@comm.ConversationId" style="margin:0px;padding:5px;">
+                    <div class="row">
+                        <div class="col-sm-3"><img class="circularProfilePic2" src="~/profilepics/@profileAcct.ProfilePic" style="width:25px;height:25px;margin:2px 0px 2px 5px;" /></div>
+                        <div class="col-sm-9">
+                            <small><b>@string.Format("{0}", profileAcct.DisplayName)</b></small>
+                            <div class="text-info"><small style="font-size:x-small;white-space:normal;">@msgPrev ...</small></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        }
+    
+        if(convos.Count() > 0){
+            <li class="divider" style="margin:0px;"></li>
+            <li class="text-center"><a href="~/messages/">View All Messages</a></li>
+        }
+    }
+}

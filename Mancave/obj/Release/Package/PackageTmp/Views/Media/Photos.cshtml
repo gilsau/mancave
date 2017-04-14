@@ -1,0 +1,6 @@
+﻿@{ ViewBag.Title = "My Photos"; }
+@section Scripts{
+    <script src="~/scripts/photos.js" type="text/javascript"></script>
+}
+
+@Html.Partial("ProfilePhotos", Session["User"])

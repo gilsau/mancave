@@ -1,0 +1,41 @@
+﻿@model String[]
+@{
+    string id = Model[0];
+    string selected = Model[1];
+    
+    string messages = "Messages|tile-messages.png|/messages/index";
+    string requests = "My Friend Requests|tile-friends.png|/messages/notifications";
+    string profile = "My Profile|tile-profile.png|/account/profile";
+    string resume = "My Resume|tile-resume.png|/personal/resume";
+    string favsites = "My Favorite Sites|tile-sites.png|/personal/favsites";
+    string myforums = "My Forums|tile-forums.png|/manforums/?mine=1";
+    string friends = "My Friends|tile-friends.png|/social/friends";
+    string radio = "My Radio|tile-radio.png|/media/radio";
+    string photos = "My Photos|tile-photos.png|/media/photos";
+    string videos = "My Videos|tile-videos.png|/media/videos";
+    string mforums = "Mforums|tile-forums.png|/manforums";
+    string mnews = "Mnews|tile-news.png|/mannews";
+    string mstore = "Mstore|tile-store.png|/manstore";
+    string msports = "Msports|tile-sports.png|/mansports";
+    string mstocks = "Mstocks|tile-stocks.png|/manstocks";
+    string mgames = "Mgames|tile-games.png|/mangames";
+}
+
+<select id="@id" name="@id">
+    <option @if (messages.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@messages">My Messages</option>
+    <option @if(requests.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@requests">My Friend Requests</option>
+    <option @if(profile.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@profile">My Profile</option>
+    <option @if(resume.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@resume">My Resume</option>
+    <option @if(favsites.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@favsites">My Favorite Sites</option>
+    <option @if(myforums.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@myforums">My Forums</option>
+    <option @if(friends.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@friends">My Friends</option>
+    <option @if(radio.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@radio">My Radio</option>
+    <option @if(photos.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@photos">My Photos</option>
+    <option @if(videos.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@videos">My Videos</option>
+    <option @if(mforums.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@mforums">Mforums</option>
+    <option @if(mnews.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@mnews">Mnews</option>
+    <option @if(mstore.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@mstore">Mstore</option>
+    <option @if(msports.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@msports">Msports</option>
+    <option @if(mstocks.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@mstocks">Mstocks</option>
+    <option @if(mgames.IndexOf(selected) > -1){ <text>selected="selected"</text> } value="@mgames">Mgames</option>
+</select>

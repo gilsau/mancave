@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MancaveModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MancaveModelStoreContainer">
+    <EntitySet Name="Account" EntityType="MancaveModel.Store.Account" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountToken" EntityType="MancaveModel.Store.AccountToken" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Country" EntityType="MancaveModel.Store.Country" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="State" EntityType="MancaveModel.Store.State" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_Account_Country" Association="MancaveModel.Store.fk_Account_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Account_State" Association="MancaveModel.Store.fk_Account_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="fk_AccountToken_Account" Association="MancaveModel.Store.fk_AccountToken_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountToken" EntitySet="AccountToken" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DisplayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="Zipcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="ProfilePic" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProfileUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AccountToken">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="Expired" Type="bit" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Token" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk_Account_Country">
+    <End Role="Country" Type="MancaveModel.Store.Country" Multiplicity="0..1" />
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Account_State">
+    <End Role="State" Type="MancaveModel.Store.State" Multiplicity="0..1" />
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_AccountToken_Account">
+    <End Role="Account" Type="MancaveModel.Store.Account" Multiplicity="1" />
+    <End Role="AccountToken" Type="MancaveModel.Store.AccountToken" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountToken">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

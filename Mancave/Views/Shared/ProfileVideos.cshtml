@@ -1,0 +1,122 @@
+﻿@using Mancave.MancaveServices
+@model Account
+@{
+    ViewBag.Title = "My Videos";
+
+    Account acctProfile = (Account)Model;
+
+    string msg = (ViewBag.Msg != null) ? ViewBag.Msg.ToString() : string.Empty;
+    
+    MancaveEntities db = new MancaveEntities();
+    List<Album> albums = db.Albums.ToList();
+
+    bool bRestricted = Session["Restricted"] != null;
+    bool bProfileView = Request.Url.ToString().ToLower().IndexOf("/account/profile") > -1;
+}
+
+<div class="sectionTitle">@ViewBag.Title</div>
+
+<div id="divWarn" class="alert alert-info alert-dismissable" style="display:@( (!string.IsNullOrEmpty(msg)) ? "block" : "none" )">
+    <button type="button" class="close" data-dismiss="alert" 
+        aria-hidden="true">
+        &times;
+    </button>
+    <div>@msg</div>
+</div>
+
+<div class="panel panel-default trans">
+    <div class="panel-body" style="padding:20px;">
+        @if(!bProfileView && !bRestricted){ <div><a href="#" data-toggle="collapse" data-target="#editPanel"><span class="pull-right glyphicon glyphicon-pencil"></span></a></div> }
+        <div id="editPanel" class="collapse">
+            <form id="frmLinks" method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Album">Select Album</label>
+                        <select @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" id="AlbumId" name="AlbumId">
+                            @foreach (Album album in albums.OrderBy(a => a.Name))
+                            {
+                                <option value="@album.Id">@album.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4" style="padding-top:20px;">
+                        <a href="#addalbumForm" data-toggle="modal" class="btn btn-md btn-primary" style="vertical-align:bottom;">Add New Album</a>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+                
+
+                <p>&nbsp;</p>
+                <label for="VideoName">Video Name</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="text" id="VideoName" name="VideoName" placeholder="name" />
+
+                <p>&nbsp;</p>
+                <label for="VideoUrl">Video Description</label>
+                <textarea @if (bRestricted){ <text>disabled="disabled"</text> } class="form-control" id="VideoDescription" name="VideoDescription" placeholder="description"></textarea>
+
+                <p>&nbsp;</p>
+                <label for="VideoUrl">Video Url</label>
+                <input @if(bRestricted){ <text>disabled="disabled"</text> } class="form-control" type="text" id="VideoUrl" name="VideoUrl" placeholder="example: http://www.youtube.com/?token=fasdfadsasf" />
+
+                <p>&nbsp;</p>
+                <button @if(bRestricted){ <text>disabled="disabled"</text> } class="pull-right btn btn-md btn-primary" style="margin-top:10px;">Add Video</button>
+            </form>
+        </div>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Album</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Url</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AccountVideo video in acctProfile.AccountVideos)
+                {
+                    <tr>
+                        <td>@video.Album.Name</td>
+                        <td>@video.Name</td>
+                        <td>@video.Description</td>
+                        <td><a target="_blank" href="@video.Url">@video.Url</a></td>
+                        <td><a class="btn btn-sm btn-primary" href="?del=1&lid=@video.Id"><span class="glyphicon glyphicon-remove"></span></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add New Album -->
+<form method="post">
+    <div id="addalbumForm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <a href="#" class="pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                        Add New Album
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="AlbumName" class="col-lg-2 control-label">Album Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" id="AlbumName" name="AlbumName" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="addalbumbtn btn btn-primary pull-right">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

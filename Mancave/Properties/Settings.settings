@@ -1,0 +1,75 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Mancave.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SendHubEndPointMessages" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.sendhub.com/v1/messages/</Value>
+    </Setting>
+    <Setting Name="SendHubEndPointContacts" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.sendhub.com/v1/contacts/</Value>
+    </Setting>
+    <Setting Name="SendHubEndPointParams" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">?username={0}&amp;amp;api_key={1}</Value>
+    </Setting>
+    <Setting Name="SendHubUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5125791355</Value>
+    </Setting>
+    <Setting Name="SendHubAPIKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">adcac1b17c58dc97948d5ab211491e865131a774</Value>
+    </Setting>
+    <Setting Name="CommRefIntMsgTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"Has sent you a referral."</Value>
+    </Setting>
+    <Setting Name="CommRefIntMsgRef" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"Has referred you as a professional."</Value>
+    </Setting>
+    <Setting Name="CommRefTxtMsgTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0} {1} has sent you a referral."</Value>
+    </Setting>
+    <Setting Name="CommRefTxtMsgRef" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0} {1} has referred you as a professional."</Value>
+    </Setting>
+    <Setting Name="CommRefEmailTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0} {1} has sent you a referral."</Value>
+    </Setting>
+    <Setting Name="CommRefEmailRef" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0} {1} has referred you as a professional."</Value>
+    </Setting>
+    <Setting Name="CommInvIntMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Friend Request</Value>
+    </Setting>
+    <Setting Name="CommInvTxtMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommInvEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommNudIntMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Has sent you a Nudge for Reward.</Value>
+    </Setting>
+    <Setting Name="CommNudTxtMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommNudEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommRewIntMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Has paid you a Reward.</Value>
+    </Setting>
+    <Setting Name="CommRewEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommRewTxtMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMTP_Host" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mail.hitechwebdev.com</Value>
+    </Setting>
+    <Setting Name="SMTP_Username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin@hitechwebdev.com</Value>
+    </Setting>
+    <Setting Name="SMTP_Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Xmod350!</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

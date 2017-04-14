@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-4">
+            <div class="account-box">
+                <div class="logo ">
+                    <img src="~/images/logo.jpg" alt=""/>
+                </div>
+                <form class="form-signin" action="#">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email" required autofocus />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required />
+                </div>
+                <label class="checkbox">
+                    <input type="checkbox" value="remember-me" />
+                    Keep me signed in
+                </label>
+                <button class="btn btn-lg btn-block purple-bg" type="submit">
+                    Sign in</button>
+                </form>
+                <a class="forgotLnk" href="http://www.jquery2dotnet.com">I can't access my account</a>
+                <div class="or-box">
+                    <span class="or">OR</span>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="#"><img src="~/images/icon_facebook_square.jpg" style="height:45px;width:45px;" /></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#"><img src="~/images/icon_google_square.jpg" style="height:45px;width:45px;" /></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#"><img src="~/images/icon_linkedin_square.jpg" style="height:50px;width:50px;" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="or-box row-block">
+                    <div class="row">
+                        <div class="col-md-12 row-block">
+                            <a href="~/account/register" class="btn btn-primary btn-block">Create New Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newaccount" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal">
+                <div class="modal-header">
+                    <p>Create Your FREE Mancave!</p>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="contact-email" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="email" placeholder="you@example.com" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone" class="col-lg-2 control-label">Phone</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="phone" placeholder="###-###-####" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

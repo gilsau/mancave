@@ -1,0 +1,115 @@
+﻿@using Referrals.ReferralsServices
+@{
+    ViewBag.Title = "My Conversations";
+    Account acctCurrent = (Account)Session["User"];
+    
+    //Get conversations for this account, group them by conversation id
+    ServiceCallResult scrConvos;
+    IEnumerable<Conversation> convos = CommSvc.GetMyConversations(false, 0, out scrConvos);
+
+    int toAcctId = 0;
+    int iCount = 0;
+    Guid? currentConvoId = null;
+    if (Request.QueryString["convoId"] != null) { currentConvoId = Guid.Parse(Request.QueryString["convoId"]); }
+}
+
+@section Scripts{
+    <script src="~/scripts/conversation.js"></script>
+}
+
+@section TitleIcon{
+    <a class="conversationslist" href="#"><span class="glyphicon glyphicon-list"></span></a>
+}
+
+<!-- TODO: Add delayed scroll, in conversation list -->
+<!-- TODO: Add loading symbol while page first loads -->
+<!-- TODO: 'Send' button functionality -->
+<!-- TODO: 'Click on Conversation & Load It' functionality -->
+<!-- TODO: 'Get Conversation Updates every 5 secs' functionality -->
+<!-- TODO: Hide Conversations list (slide it to the left) on small devices -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="convoList" class="col-md-4 list-group" style="overflow-y:scroll;">
+            @{  if(convos.Count() > 0){
+                
+                    ServiceCallResult scrMsgs;
+                
+                    //Loop thru conversations
+                    foreach (var convo in convos)
+                    {
+                        iCount++;
+
+                        //Accounts
+                        Account fromAcct = (from a in convo.Props select a.Account).First();
+                        Account toAcct = (from a in convo.Props select a.Account2).First();
+                        Account profileAcct = fromAcct.Id == acctCurrent.Id ? toAcct : fromAcct;
+                        Communication comm = (from c in convo.Props select c).First();
+
+                        //Save first convo to display in window
+                        if (iCount == 1)
+                        {
+                            if (currentConvoId == null) { currentConvoId = comm.ConversationId; }
+                        }   
+
+                        //Prepare some vars for displaying message info
+                        Communication mostRecentComm = CommSvc.GetMostRecentMessageByConversationId(comm.ConversationId, out scrMsgs);
+                        string mostRecentMsgPrev = mostRecentComm.MessageTo.Length > 30 ? mostRecentComm.MessageTo.Substring(0, 30) : mostRecentComm.MessageTo;
+                        string timedate = string.Format("{0:MM/dd/yyyy HH:mm:ss tt}", mostRecentComm.LastUpdated);
+                        string convoBackColor = convo.Id == currentConvoId ? "active" : "";
+                    
+                        <div class="convoItem list-group-item @convoBackColor" data-convo-id="@comm.ConversationId" data-to-acct-id="@profileAcct.Id">
+                            <div class="row list-group-item-text">
+                                <div class="col-md-3">
+                                    <a href="~/account/profileview?id=@profileAcct.Id"><img class="circularProfilePic2" src="~/profilepics/@profileAcct.ProfilePic" style="width:55px;height:55px;" /></a>
+                                </div>
+                                <div class="col-md-9">
+                                    <small class="pull-right text-info">@timedate</small>
+                                    <div class="text-left"><a href="~/account/profileview?id=@profileAcct.Id"><b>@string.Format("{0} {1}", profileAcct.Firstname, profileAcct.Lastname)</b></a></div>
+                                    <div id="status-messages-user-@profileAcct.Id" data-id="@profileAcct.Id" class="status-messages-user text-left" style="color:@profileAcct.Status.Color">
+                                        &nbsp;@profileAcct.Status.Name
+                                        <small>@{ if(mostRecentComm.ToAcctId == acctCurrent.Id && mostRecentComm.StatusToId == (int)StatusType.New && currentConvoId != mostRecentComm.ConversationId) { <img id="imgNewMail-@mostRecentComm.ConversationId" class="pull-right" style="height:30px;" src="~/images/icon_mail_new5.jpg" /> } }</small>
+                                    </div>
+                                    <div id="divMostRecentMsg-@comm.ConversationId">@mostRecentMsgPrev ...</div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else{
+                    <text><p class="alert alert-info text-center">You have no conversations.</p></text>
+                }
+            }
+        </div>
+
+        <!-- Conversation Panel (message for selected conversation on the left side) -->
+        <div class="col-md-8 no-margin">
+            @if (currentConvoId != null)
+             {
+                <div class="panel panel-default" id="convoPanel">
+                    <img id="imgConvoLoading" src="~/images/loading_animated.gif" style="display:none;" />
+                    <div id="convoMsgs">
+                        @{
+                            ServiceCallResult scrMsgs;
+                            IList<Communication> msgs = CommSvc.GetMessagesByConversationId(currentConvoId, false, out scrMsgs).OrderBy(m => m.LastUpdated).ToList();
+                            toAcctId = (acctCurrent.Id != msgs.First().ToAcctId) ? msgs.First().ToAcctId : msgs.First().FromAcctId;
+                        }
+                        @Html.Partial("~/Views/Messages/ConversationPanel.cshtml", msgs);
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="col-md-10" style="padding:0px 3px 0px 3px;vertical-align:top;"><textarea id="txtConvoMsg" class="form-control" rows="2"></textarea></div>
+                    <div class="col-md-2" style="padding:0px 3px 0px 3px;vertical-align:top;"><button id="btnSendConvoMsg" class="btn btn-primary btn-lg btn-block" data-user-name="@string.Format("{0} {1}", acctCurrent.Firstname, acctCurrent.Lastname)">Send</button></div>
+                </div>
+            }
+            else
+            {
+                <text><p class="alert alert-info text-center">You have no messages.</p></text>
+            }
+
+            <input type="hidden" id="convoId" value="@currentConvoId" />
+            <input type="hidden" id="fromAcctId" value="@acctCurrent.Id" />
+            <input type="hidden" id="toAcctId" value="@toAcctId" />
+        </div>
+    </div>
+</div>
